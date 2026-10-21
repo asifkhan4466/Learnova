@@ -1,0 +1,10 @@
+.admin-permissions-page h1 { margin: 0; font-size: 28px; color: var(--learnova-navy); }
+.admin-permissions-page header { margin-bottom: 25px; }
+.admin-permissions-page p { margin: 8px 0 16px; color: var(--learnova-muted); font-size: 14px; line-height: 1.6; }
+.admin-permissions-list { display: grid; gap: 20px; }
+.admin-permission-account { margin: 0; min-width: 0; padding: 20px; border: 1px solid var(--learnova-border); border-radius: 10px; background: var(--learnova-surface); }
+.admin-permission-account legend { padding: 0 8px; color: var(--learnova-navy); font-weight: 600; }
+.admin-permission-options { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.admin-permission-options label { display: flex; gap: 10px; align-items: flex-start; font-size: 14px; line-height: 1.5; cursor: pointer; }
+.admin-permission-options input { accent-color: var(--learnova-primary); flex-shrink: 0; margin-top: 4px; }
+@media (max-width: 900px) { .admin-permission-options { grid-template-columns: minmax(0, 1fr); } }

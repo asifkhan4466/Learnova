@@ -1,0 +1,306 @@
+/* Styles owned by StudentLayout.jsx. Shared class names use zero-specificity page scopes. */
+
+:where(.student-layout) .student-avatar {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--learnova-primary);
+  color: var(--learnova-surface);
+  font-weight: bold;
+}
+
+.student-layout {
+  min-height: 100vh;
+  display: flex;
+  background: var(--learnova-bg);
+}
+
+.student-sidebar {
+  width: 250px;
+  min-height: 100vh;
+  background: var(--learnova-surface);
+  border-right: 1px solid var(--learnova-border);
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 100;
+}
+
+.student-logo {
+  height: 75px;
+  display: flex;
+  align-items: center;
+  padding: 0 25px;
+  font-size: 25px;
+  font-weight: 700;
+  border-bottom: 1px solid var(--learnova-border);
+}
+
+.student-nav {
+  padding: 25px 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.student-nav a,
+.student-sidebar-bottom a {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 13px 15px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: var(--learnova-muted);
+  font-size: 15px;
+  font-weight: 500;
+  transition: 0.2s ease;
+}
+
+.student-nav a span,
+.student-sidebar-bottom a span {
+  width: 20px;
+  text-align: center;
+  font-size: 16px;
+}
+
+.student-nav a:hover,
+.student-sidebar-bottom a:hover {
+  background: var(--learnova-light);
+  color: var(--learnova-primary);
+}
+
+.student-nav a.active {
+  background: var(--learnova-primary);
+  color: var(--learnova-surface);
+}
+
+.student-sidebar-bottom {
+  margin-top: auto;
+  padding: 15px;
+  border-top: 1px solid var(--learnova-border);
+}
+
+.student-content {
+  width: calc(100% - 250px);
+  margin-left: 250px;
+  min-height: 100vh;
+}
+
+.student-topbar {
+  height: 75px;
+  background: var(--learnova-surface);
+  border-bottom: 1px solid var(--learnova-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 35px;
+}
+
+.student-topbar h2 {
+  margin: 0;
+  font-size: 19px;
+}
+
+.student-topbar p {
+  margin: 4px 0 0;
+  color: var(--learnova-muted);
+  font-size: 12px;
+}
+
+.student-user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+:where(.student-layout) .student-avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: var(--learnova-primary);
+  color: var(--learnova-surface);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+
+.student-user strong {
+  display: block;
+  font-size: 14px;
+}
+
+.student-user span {
+  display: block;
+  color: var(--learnova-muted);
+  font-size: 12px;
+  margin-top: 3px;
+}
+
+.student-main {
+  padding: 30px 35px;
+}
+
+@media (max-width: 900px) {
+  .student-sidebar {
+    width: 210px;
+  }
+
+  .student-content {
+    width: calc(100% - 210px);
+    margin-left: 210px;
+  }
+
+  .student-topbar {
+    padding: 0 20px;
+  }
+
+  .student-main {
+    padding: 25px 20px;
+  }
+}
+
+@media (max-width: 700px) {
+  .student-sidebar {
+    width: 70px;
+  }
+
+  .student-logo {
+    justify-content: center;
+    padding: 0;
+    font-size: 0;
+  }
+
+  .student-logo::after {
+    content: none;
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+  .student-nav {
+    padding: 20px 10px;
+  }
+
+  .student-nav a,
+  .student-sidebar-bottom a {
+    justify-content: center;
+    padding: 13px 8px;
+  }
+
+  .student-nav a span,
+  .student-sidebar-bottom a span {
+    margin: 0;
+  }
+
+  .student-nav a {
+    font-size: 0;
+  }
+
+  .student-nav a span {
+    font-size: 18px;
+  }
+
+  .student-sidebar-bottom a {
+    font-size: 0;
+  }
+
+  .student-sidebar-bottom a span {
+    font-size: 18px;
+  }
+
+  .student-content {
+    width: calc(100% - 70px);
+    margin-left: 70px;
+  }
+
+  .student-topbar {
+    padding: 0 15px;
+  }
+
+  .student-topbar h2 {
+    font-size: 16px;
+  }
+
+  .student-topbar p {
+    display: none;
+  }
+
+  .student-user div:last-child {
+    display: none;
+  }
+
+  .student-main {
+    padding: 20px 15px;
+  }
+}
+
+.student-logo > img {
+  display: block;
+  height: 60px;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+@media (max-width: 700px) {
+  .student-logo > img {
+    height: 48px;
+  }
+}
+
+/* Shared Learnova sidebar palette, owned by this layout. */
+.student-sidebar { background: var(--learnova-navy); color: var(--learnova-on-dark); border-color: var(--learnova-navy); }
+.student-logo { background: var(--learnova-surface); border-color: var(--learnova-border); }
+.student-nav a, .student-sidebar-bottom a { color: var(--learnova-on-dark); }
+.student-nav a:hover, .student-sidebar-bottom a:hover { background: var(--learnova-primary); color: var(--learnova-white); }
+.student-nav a.active { background: var(--learnova-primary); color: var(--learnova-white); box-shadow: inset 3px 0 var(--learnova-cyan); }
+.student-sidebar-bottom { border-color: color-mix(in srgb, var(--learnova-cyan) 20%, var(--learnova-navy)); }
+
+.student-avatar img { width:100%; height:100%; object-fit:cover; border-radius:50%; display:block; }
+
+@media (max-width: 900px) {
+  .student-content, .student-topbar > div { min-width: 0; }
+  .student-topbar { height: auto; min-height: 75px; gap: 10px; flex-wrap: wrap; padding-top: 10px; padding-bottom: 10px; }
+  .student-topbar > a { flex-basis: 100%; overflow-wrap: anywhere; }
+  .student-user { flex-shrink: 0; }
+}
+@media (max-width: 700px) {
+  .student-main { padding: 20px 12px; }
+}
+
+/* On phones, put navigation above the page so the content uses the full screen. */
+@media (max-width: 700px) {
+  .student-layout { display: block; }
+  .student-sidebar {
+    position: static;
+    width: 100%;
+    min-height: 0;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    border-right: 0;
+  }
+  .student-logo { height: 64px; padding: 4px 12px; justify-content: flex-start; border-bottom: 0; }
+  .student-sidebar-bottom { grid-column: 2; grid-row: 1; margin: 0; padding: 8px 12px; border: 0; align-self: center; }
+  .student-sidebar-bottom a { font-size: 13px; margin: 0; padding: 10px; }
+  .student-nav {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-direction: row;
+    gap: 6px;
+    padding: 8px;
+    min-width: 0;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+  }
+  .student-nav a { flex: 0 0 auto; font-size: 13px; padding: 12px; margin: 0; white-space: nowrap; gap: 8px; }
+  .student-content { width: 100%; margin-left: 0; min-width: 0; }
+  .student-topbar { min-height: 75px; height: auto; padding: 12px; }
+  .student-main { padding: 20px 12px; }
+}

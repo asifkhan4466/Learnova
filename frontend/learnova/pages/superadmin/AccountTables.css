@@ -1,0 +1,77 @@
+:is(.admin-students, .admin-teachers, .admin-subadmins) { --as-ink: #07114d; --as-blue: #0069ff; --as-muted: #6176a9; --as-border: #deebff; font-family: Arial, sans-serif; color: var(--as-ink); }
+:is(.admin-students, .admin-teachers, .admin-subadmins) .as-banner { display: flex; justify-content: space-between; align-items: center; gap: 24px; background: linear-gradient(110deg,#dfedff,#f0faff 55%,#e1efff); border: 1px solid #d7eaff; border-radius: 10px; padding: 20px 18px; margin-bottom: 16px; }
+:is(.admin-students, .admin-teachers, .admin-subadmins) h1 { margin: 0 0 5px; font-size: 29px; letter-spacing: -.8px; }
+:is(.admin-students, .admin-teachers, .admin-subadmins) .as-banner p { margin: 0; font-size: 14px; color: #486394; line-height: 1.5; }
+:is(.admin-students, .admin-teachers, .admin-subadmins) .as-banner-art { display: flex; align-items: center; gap: 30px; text-align: right; font-size: 12px; line-height: 1.5; }
+:is(.admin-students, .admin-teachers, .admin-subadmins) .as-banner-art small { display: block; color: var(--as-muted); }
+:is(.admin-students, .admin-teachers, .admin-subadmins) .as-banner-art > svg { width: 110px; height: 70px; stroke-width: 1.3; color: #82baff; transform: rotate(-10deg); }
+:is(.admin-students, .admin-teachers, .admin-subadmins) .as-stats { display: grid; grid-template-columns: repeat(6,minmax(0,1fr)); gap: 10px; margin-bottom: 18px; }
+:is(.admin-students, .admin-teachers, .admin-subadmins) .as-stats article { display: flex; align-items: center; gap: 12px; padding: 14px 12px; border: 1px solid var(--as-border); border-radius: 9px; background: white; min-width: 0; }
+:is(.admin-students, .admin-teachers, .admin-subadmins) .as-tone-0 { --as-accent: #006dff; }
+:is(.admin-students, .admin-teachers, .admin-subadmins) .as-tone-1 { --as-accent: #00bd78; }
+:is(.admin-students, .admin-teachers, .admin-subadmins) .as-tone-2 { --as-accent: #ff337a; }
+:is(.admin-students, .admin-teachers, .admin-subadmins) .as-tone-3 { --as-accent: #ff831b; }
+:is(.admin-students, .admin-teachers, .admin-subadmins) .as-tone-4 { --as-accent: #8526ff; }
+:is(.admin-students, .admin-teachers, .admin-subadmins) .as-tone-5 { --as-accent: #ffad00; }
+:is(.admin-students, .admin-teachers, .admin-subadmins) .as-stat-icon { width: 52px; height: 55px; flex-shrink: 0; display: grid; place-items: center; border-radius: 14px; background: color-mix(in srgb,var(--as-accent) 12%,white); color: var(--as-accent); }
+:is(.admin-students, .admin-teachers, .admin-subadmins) .as-stat-icon svg { width: 29px; height: 29px; stroke-width: 2.3; }
+:is(.admin-students, .admin-teachers, .admin-subadmins) .as-stats strong { display: block; font-size: 24px; line-height: 1.1; }
+:is(.admin-students, .admin-teachers, .admin-subadmins) .as-stats div > span { display: block; font-size: 12px; margin-top: 5px; }
+:is(.admin-students, .admin-teachers, .admin-subadmins) .as-stats small { display: block; font-size: 10px; margin-top: 6px; color: var(--as-muted); }
+:is(.admin-students, .admin-teachers, .admin-subadmins) .as-tools { display: flex; align-items: center; gap: 10px; margin-bottom: 16px; }
+:is(.admin-students, .admin-teachers, .admin-subadmins) .as-search { display: flex; align-items: center; gap: 10px; flex: 1 1 290px; min-width: 160px; border: 1px solid var(--as-border); border-radius: 7px; padding: 0 12px; background: white; }
+:is(.admin-students, .admin-teachers, .admin-subadmins) .as-search svg { width: 20px; height: 20px; color: var(--as-muted); flex-shrink: 0; }
+:is(.admin-students, .admin-teachers, .admin-subadmins) .as-search input { width: 100%; min-width: 0; height: 39px; border: 0; background: transparent; color: var(--as-ink); font: inherit; font-size: 12px; outline: none; }
+:is(.admin-students, .admin-teachers, .admin-subadmins) .as-search:focus-within { outline: 2px solid #80b7ff; }
+:is(.admin-students, .admin-teachers, .admin-subadmins) input::placeholder { color: var(--as-muted); }
+:is(.admin-students, .admin-teachers, .admin-subadmins) select, :is(.admin-students, .admin-teachers, .admin-subadmins) button { padding: 10px 12px; border: 1px solid var(--as-border); border-radius: 7px; color: var(--as-ink); background: white; font: inherit; font-size: 12px; }
+:is(.admin-students, .admin-teachers, .admin-subadmins) .as-tools select { min-width: 110px; max-width: 180px; flex: 1; }
+:is(.admin-students, .admin-teachers, .admin-subadmins) button { cursor: pointer; }
+:is(.admin-students, .admin-teachers, .admin-subadmins) button:hover { background: #f0f7ff; }
+:is(.admin-students, .admin-teachers, .admin-subadmins) button:disabled { opacity: .45; cursor: not-allowed; }
+:is(.admin-students, .admin-teachers, .admin-subadmins) .as-export { display: flex; align-items: center; gap: 10px; background: var(--as-blue); border-color: var(--as-blue); color: white; }
+:is(.admin-students, .admin-teachers, .admin-subadmins) .as-export:hover { background: #0054d9; }
+:is(.admin-students, .admin-teachers, .admin-subadmins) .as-export svg { width: 17px; height: 17px; }
+:is(.admin-students, .admin-teachers, .admin-subadmins) .as-table-wrap { width: 100%; overflow-x: auto; background: white; border: 1px solid var(--as-border); border-radius: 9px; }
+:is(.admin-students, .admin-teachers, .admin-subadmins) table { width: 100%; min-width: 1180px; border-collapse: collapse; font-family: inherit; font-size: 12px; }
+:is(.admin-students, .admin-teachers, .admin-subadmins) th { padding: 10px 12px; font-size: 12px; text-align: left; white-space: nowrap; background: linear-gradient(#f0f7ff,#e8f2ff); border-right: 1px solid var(--as-border); border-bottom: 1px solid var(--as-border); }
+:is(.admin-students, .admin-teachers, .admin-subadmins) td { padding: 10px 12px; border-bottom: 1px solid var(--as-border); color: #3b548c; }
+:is(.admin-students, .admin-teachers, .admin-subadmins) tbody tr:last-child td { border-bottom: 0; }
+:is(.admin-students, .admin-teachers, .admin-subadmins) tbody tr:hover { background: #f8fbff; }
+:is(.admin-students, .admin-teachers, .admin-subadmins) .as-student, :is(.admin-students, .admin-teachers, .admin-subadmins) .as-course { display: flex; gap: 10px; align-items: center; }
+:is(.admin-students, .admin-teachers, .admin-subadmins) .as-avatar { width: 36px; height: 36px; display: grid; place-items: center; flex-shrink: 0; border-radius: 50%; background: #e7effb; color: #365a95; font-size: 12px; font-weight: 600; }
+:is(.admin-students, .admin-teachers, .admin-subadmins) .as-avatar img { width: 100%; height: 100%; object-fit: cover; border-radius: inherit; }
+:is(.admin-students, .admin-teachers, .admin-subadmins) td strong { display: block; font-size: 12px; font-weight: 600; color: var(--as-ink); }
+:is(.admin-students, .admin-teachers, .admin-subadmins) td small { display: block; margin-top: 4px; font-size: 11px; color: var(--as-muted); }
+:is(.admin-students, .admin-teachers, .admin-subadmins) .as-course > span { display: grid; place-items: center; width: 31px; height: 32px; flex-shrink: 0; border-radius: 7px; color: var(--as-accent); background: color-mix(in srgb,var(--as-accent) 13%,white); }
+:is(.admin-students, .admin-teachers, .admin-subadmins) .as-course svg { width: 20px; height: 20px; }
+:is(.admin-students, .admin-teachers, .admin-subadmins) .as-progress { display: flex; align-items: center; gap: 9px; min-width: 135px; --as-progress-color: #087cff; }
+:is(.admin-students, .admin-teachers, .admin-subadmins) .as-progress-1 { --as-progress-color: #8c4bff; }
+:is(.admin-students, .admin-teachers, .admin-subadmins) .as-progress-2 { --as-progress-color: #00b9d7; }
+:is(.admin-students, .admin-teachers, .admin-subadmins) progress { width: 105px; height: 8px; border: 0; border-radius: 8px; overflow: hidden; background: #e0e9f5; accent-color: var(--as-progress-color); }
+:is(.admin-students, .admin-teachers, .admin-subadmins) progress::-webkit-progress-bar { background: #e0e9f5; border-radius: 8px; }
+:is(.admin-students, .admin-teachers, .admin-subadmins) progress::-webkit-progress-value { background: linear-gradient(90deg,var(--as-progress-color),color-mix(in srgb,var(--as-progress-color) 75%,white)); border-radius: 8px; }
+:is(.admin-students, .admin-teachers, .admin-subadmins) progress::-moz-progress-bar { background: var(--as-progress-color); border-radius: 8px; }
+:is(.admin-students, .admin-teachers, .admin-subadmins) .as-badge { display: inline-flex; align-items: center; gap: 5px; padding: 6px 8px; font-size: 11px; border-radius: 7px; white-space: nowrap; }
+:is(.admin-students, .admin-teachers, .admin-subadmins) .as-badge svg { width: 12px; height: 12px; stroke-width: 3; }
+:is(.admin-students, .admin-teachers, .admin-subadmins) .as-good { background: #e5faf0; color: #00a45c; }
+:is(.admin-students, .admin-teachers, .admin-subadmins) .as-pending { background: #fff5df; color: #d58a00; }
+:is(.admin-students, .admin-teachers, .admin-subadmins) .as-neutral { background: #e7f1ff; color: #006dff; }
+:is(.admin-students, .admin-teachers, .admin-subadmins) .as-inactive { background: #ffe7ee; color: #f32a5b; }
+:is(.admin-students, .admin-teachers, .admin-subadmins) .as-view { width: 34px; height: 34px; padding: 0; font-size: 23px; line-height: 1; }
+:is(.admin-students, .admin-teachers, .admin-subadmins) .as-empty { text-align: center; padding: 30px; }
+:is(.admin-students, .admin-teachers, .admin-subadmins) .as-pagination { display: flex; align-items: center; justify-content: space-between; gap: 15px; padding: 15px 3px; color: #405e92; font-size: 13px; }
+:is(.admin-students, .admin-teachers, .admin-subadmins) .as-pagination nav { display: flex; gap: 6px; }
+:is(.admin-students, .admin-teachers, .admin-subadmins) .as-pagination button { width: 33px; height: 33px; padding: 0; }
+:is(.admin-students, .admin-teachers, .admin-subadmins) .as-pagination [aria-current=page] { color: white; background: var(--as-blue); border-color: var(--as-blue); }
+:is(.admin-students, .admin-teachers, .admin-subadmins) :is(button,select):focus-visible { outline: 2px solid #80b7ff; outline-offset: 2px; }
+:is(.admin-students, .admin-teachers, .admin-subadmins) .as-details { width: min(500px,calc(100vw - 32px)); max-height: 85vh; overflow: auto; box-sizing: border-box; padding: 24px; border: 1px solid var(--as-border); border-radius: 10px; color: var(--as-ink); }
+:is(.admin-students, .admin-teachers, .admin-subadmins) .as-details::backdrop { background: #07114d60; }
+:is(.admin-students, .admin-teachers, .admin-subadmins) .as-details h2 { margin-top: 0; }
+:is(.admin-students, .admin-teachers, .admin-subadmins) .as-details dl { display: grid; gap: 15px; }
+:is(.admin-students, .admin-teachers, .admin-subadmins) .as-details dt { font-size: 12px; color: var(--as-muted); }
+:is(.admin-students, .admin-teachers, .admin-subadmins) .as-details dd { margin: 4px 0 0; overflow-wrap: anywhere; }
+@media (max-width: 1450px) { :is(.admin-students, .admin-teachers, .admin-subadmins) .as-stats { grid-template-columns: repeat(3,minmax(0,1fr)); } :is(.admin-students, .admin-teachers, .admin-subadmins) .as-tools { flex-wrap: wrap; } :is(.admin-students, .admin-teachers, .admin-subadmins) .as-search { flex-basis: 100%; } }
+@media (max-width: 1000px) { :is(.admin-students, .admin-teachers, .admin-subadmins) .as-banner-art { display: none; } }
+@media (max-width: 700px) { :is(.admin-students, .admin-teachers, .admin-subadmins) .as-stats { grid-template-columns: repeat(2,minmax(0,1fr)); } :is(.admin-students, .admin-teachers, .admin-subadmins) .as-stats article { flex-direction: column; align-items: flex-start; } :is(.admin-students, .admin-teachers, .admin-subadmins) .as-tools select { max-width: none; min-width: 120px; } }
+@media (max-width: 480px) { :is(.admin-students, .admin-teachers, .admin-subadmins) .as-stats { grid-template-columns: minmax(0,1fr); } :is(.admin-students, .admin-teachers, .admin-subadmins) .as-stats article { flex-direction: row; align-items: center; } :is(.admin-students, .admin-teachers, .admin-subadmins) .as-pagination { flex-wrap: wrap; } :is(.admin-students, .admin-teachers, .admin-subadmins) .as-banner { padding: 18px; } }

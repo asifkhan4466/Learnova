@@ -1,0 +1,265 @@
+.public-header {
+  background: var(--learnova-white);
+  border-bottom: 1px solid var(--learnova-border);
+  position: relative;
+  z-index: 30;
+}
+
+.public-header .navbar {
+  max-width: 1392px;
+  padding: 4px 36px;
+  min-height: 88px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  font-size: 13px;
+  color: var(--learnova-ink);
+}
+
+.public-header .logo {
+  flex: 0 0 76px;
+  display: flex;
+  align-items: center;
+}
+
+.public-header .logo img {
+  display: block;
+  width: 76px;
+  height: 76px;
+  object-fit: contain;
+}
+
+.public-header .nav-content {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  flex: 1;
+  min-width: 0;
+}
+
+.public-header .nav-links,
+.public-header .nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-shrink: 0;
+}
+
+.public-header .nav-links a {
+  color: var(--learnova-muted);
+  text-decoration: none;
+  padding: 14px 0;
+  font-weight: 600;
+  position: relative;
+}
+
+.public-header .nav-links a.active,
+.public-header .nav-links a:hover {
+  color: var(--learnova-primary);
+}
+
+.public-header .nav-links a.active::after {
+  content: "";
+  position: absolute;
+  bottom: 5px;
+  height: 2px;
+  left: 0;
+  right: 0;
+  background: var(--learnova-primary);
+}
+
+.public-search {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  min-width: 150px;
+  background: var(--learnova-light);
+  border: 1px solid var(--learnova-border);
+  border-radius: 6px;
+}
+
+.public-search:focus-within {
+  border-color: var(--learnova-primary);
+  outline: 2px solid color-mix(in srgb, var(--learnova-primary) 16%, transparent);
+}
+
+.public-search input {
+  padding: 13px 0 13px 14px;
+  min-width: 0;
+  width: 100%;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: var(--learnova-ink);
+  font-size: 12px;
+}
+
+.public-search input::placeholder {
+  color: var(--learnova-muted);
+}
+
+.public-search button {
+  border: 0;
+  background: transparent;
+  padding: 10px 13px;
+  color: var(--learnova-primary);
+  cursor: pointer;
+}
+
+.public-header .nav-actions {
+  gap: 18px;
+}
+
+.public-header .nav-actions a {
+  text-decoration: none;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.public-header .login-btn {
+  color: var(--learnova-ink);
+  padding: 12px 0;
+}
+
+.public-header .register-btn {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 13px 18px;
+  border-radius: 5px;
+  background: var(--learnova-primary);
+  color: var(--learnova-white);
+}
+
+.public-header .register-btn:hover {
+  background: var(--learnova-dark);
+}
+
+.public-header .register-btn .public-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.public-header .menu-toggle {
+  display: none;
+  border: 1px solid var(--learnova-border);
+  background: var(--learnova-white);
+  color: var(--learnova-dark);
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.navbar-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+.public-header a:focus-visible,
+.public-header button:focus-visible {
+  outline: 2px solid var(--learnova-primary);
+  outline-offset: 4px;
+}
+
+@media (max-width: 1150px) {
+  .public-header .navbar {
+    gap: 20px;
+    padding-inline: 24px;
+  }
+
+  .public-header .nav-content {
+    gap: 20px;
+  }
+
+  .public-header .nav-links {
+    gap: 16px;
+  }
+
+  .public-header .nav-actions {
+    gap: 12px;
+  }
+
+  .public-header .register-btn {
+    padding-inline: 13px;
+  }
+
+  .public-header .register-btn .public-icon {
+    display: none;
+  }
+}
+
+@media (max-width: 960px) {
+  .public-header .navbar {
+    min-height: 76px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0;
+    padding: 2px 24px;
+  }
+
+  .public-header .logo {
+    flex-basis: 68px;
+  }
+
+  .public-header .logo img {
+    width: 68px;
+    height: 68px;
+  }
+
+  .public-header .menu-toggle {
+    display: block;
+  }
+
+  .public-header .nav-content {
+    display: none;
+    width: 100%;
+    flex-basis: 100%;
+    padding: 12px 0 22px;
+  }
+
+  .public-header .nav-content.active {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .public-header .nav-links {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .public-search {
+    flex-basis: 100%;
+    order: -1;
+  }
+
+  .public-header .nav-actions {
+    width: 100%;
+    justify-content: space-between;
+    border-top: 1px solid var(--learnova-border);
+    padding-top: 18px;
+  }
+
+  .public-header .register-btn .public-icon {
+    display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  .public-header .navbar {
+    padding-inline: 20px;
+  }
+}
+
+/* Learnova interaction polish; geometry is unchanged. */
+:where(.public-header) :is(input, select, textarea):focus-visible { border-color: var(--learnova-primary); outline: 2px solid var(--learnova-focus); outline-offset: 2px; }
+:where(.public-header) :is(button, a):focus-visible { outline: 2px solid var(--learnova-primary); outline-offset: 3px; }
+:where(.public-header) :is(input, button, select, textarea):disabled { opacity: .65; cursor: not-allowed; }
+:where(.public-header) input[type="checkbox"] { accent-color: var(--learnova-primary); }

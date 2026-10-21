@@ -1,0 +1,281 @@
+/* Styles owned by TeacherLayout.jsx. Shared class names use zero-specificity page scopes. */
+
+.teacher-layout {
+  min-height: 100vh;
+  display: flex;
+  background: var(--learnova-bg);
+}
+
+.teacher-sidebar {
+  width: 250px;
+  min-height: 100vh;
+  background: var(--learnova-primary);
+  color: var(--learnova-surface);
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  z-index: 100;
+}
+
+.teacher-logo {
+  height: 75px;
+  display: flex;
+  align-items: center;
+  padding: 0 25px;
+  font-size: 23px;
+  font-weight: 700;
+  border-bottom: 1px solid var(--learnova-primary);
+}
+
+.teacher-nav {
+  flex: 1;
+  padding: 18px 12px;
+  overflow-y: auto;
+}
+
+.teacher-nav a,
+.teacher-sidebar-bottom a {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  color: var(--learnova-on-dark);
+  text-decoration: none;
+  padding: 12px 14px;
+  margin-bottom: 4px;
+  border-radius: 7px;
+  font-size: 14px;
+  transition: 0.2s ease;
+}
+
+.teacher-nav a span,
+.teacher-sidebar-bottom a span {
+  width: 20px;
+  text-align: center;
+  font-size: 16px;
+}
+
+.teacher-nav a:hover,
+.teacher-sidebar-bottom a:hover {
+  background: var(--learnova-primary);
+  color: var(--learnova-surface);
+}
+
+.teacher-nav a.active {
+  background: var(--learnova-surface);
+  color: var(--learnova-ink);
+  font-weight: 600;
+}
+
+.teacher-sidebar-bottom {
+  padding: 15px 12px;
+  border-top: 1px solid var(--learnova-primary);
+}
+
+.teacher-content {
+  width: calc(100% - 250px);
+  margin-left: 250px;
+  min-height: 100vh;
+}
+
+.teacher-topbar {
+  height: 75px;
+  background: var(--learnova-surface);
+  border-bottom: 1px solid var(--learnova-border);
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.teacher-topbar h2 {
+  margin: 0 0 4px;
+  font-size: 18px;
+  color: var(--learnova-ink);
+}
+
+.teacher-topbar p {
+  margin: 0;
+  font-size: 12px;
+  color: var(--learnova-muted);
+}
+
+.teacher-user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.teacher-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--learnova-primary);
+  color: var(--learnova-surface);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+
+.teacher-user strong {
+  display: block;
+  color: var(--learnova-ink);
+  font-size: 13px;
+}
+
+.teacher-user span {
+  display: block;
+  color: var(--learnova-muted);
+  font-size: 11px;
+  margin-top: 3px;
+}
+
+.teacher-main {
+  padding: 30px;
+}
+
+@media (max-width: 900px) {
+  .teacher-sidebar {
+    width: 210px;
+  }
+
+  .teacher-content {
+    width: calc(100% - 210px);
+    margin-left: 210px;
+  }
+}
+
+@media (max-width: 700px) {
+  .teacher-sidebar {
+    width: 70px;
+  }
+
+  .teacher-logo {
+    justify-content: center;
+    padding: 0;
+    font-size: 0;
+  }
+
+  .teacher-logo::before {
+    content: none;
+    font-size: 22px;
+    font-weight: 700;
+  }
+
+  .teacher-nav {
+    padding: 15px 8px;
+  }
+
+  .teacher-nav a,
+  .teacher-sidebar-bottom a {
+    justify-content: center;
+    padding: 12px 8px;
+  }
+
+  .teacher-nav a span,
+  .teacher-sidebar-bottom a span {
+    margin: 0;
+  }
+
+  .teacher-nav a {
+    font-size: 0;
+  }
+
+  .teacher-nav a span {
+    font-size: 17px;
+  }
+
+  .teacher-sidebar-bottom a {
+    font-size: 0;
+  }
+
+  .teacher-sidebar-bottom a span {
+    font-size: 17px;
+  }
+
+  .teacher-content {
+    width: calc(100% - 70px);
+    margin-left: 70px;
+  }
+
+  .teacher-topbar {
+    padding: 0 18px;
+  }
+
+  .teacher-topbar h2 {
+    font-size: 16px;
+  }
+
+  .teacher-user div:last-child {
+    display: none;
+  }
+
+  .teacher-main {
+    padding: 20px;
+  }
+}
+
+.teacher-logo > img {
+  display: block;
+  height: 60px;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+@media (max-width: 700px) {
+  .teacher-logo > img {
+    height: 48px;
+  }
+}
+
+/* Shared Learnova sidebar palette, owned by this layout. */
+.teacher-sidebar { background: var(--learnova-navy); color: var(--learnova-on-dark); border-color: var(--learnova-navy); }
+.teacher-logo { background: var(--learnova-surface); border-color: var(--learnova-border); }
+.teacher-nav a, .teacher-sidebar-bottom a { color: var(--learnova-on-dark); }
+.teacher-nav a:hover, .teacher-sidebar-bottom a:hover { background: var(--learnova-primary); color: var(--learnova-white); }
+.teacher-nav a.active { background: var(--learnova-primary); color: var(--learnova-white); box-shadow: inset 3px 0 var(--learnova-cyan); }
+.teacher-sidebar-bottom { border-color: color-mix(in srgb, var(--learnova-cyan) 20%, var(--learnova-navy)); }
+
+.teacher-avatar img { width:100%; height:100%; object-fit:cover; border-radius:50%; display:block; }
+
+@media (max-width: 700px) {
+  .teacher-content, .teacher-topbar > div { min-width: 0; }
+  .teacher-topbar { gap: 10px; padding: 0 12px; }
+  .teacher-topbar p { overflow-wrap: anywhere; }
+  .teacher-user { flex-shrink: 0; }
+  .teacher-main { padding: 20px 12px; }
+}
+
+/* On phones, put navigation above the page so the content uses the full screen. */
+@media (max-width: 700px) {
+  .teacher-layout { display: block; }
+  .teacher-sidebar {
+    position: static;
+    width: 100%;
+    min-height: 0;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    border-right: 0;
+  }
+  .teacher-logo { height: 64px; padding: 4px 12px; justify-content: flex-start; border-bottom: 0; }
+  .teacher-sidebar-bottom { grid-column: 2; grid-row: 1; margin: 0; padding: 8px 12px; border: 0; align-self: center; }
+  .teacher-sidebar-bottom a { font-size: 13px; margin: 0; padding: 10px; }
+  .teacher-nav {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-direction: row;
+    gap: 6px;
+    padding: 8px;
+    min-width: 0;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+  }
+  .teacher-nav a { flex: 0 0 auto; font-size: 13px; padding: 12px; margin: 0; white-space: nowrap; gap: 8px; }
+  .teacher-content { width: 100%; margin-left: 0; min-width: 0; }
+  .teacher-topbar { min-height: 75px; height: auto; padding: 12px; }
+  .teacher-main { padding: 20px 12px; }
+}

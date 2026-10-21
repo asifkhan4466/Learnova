@@ -1,0 +1,86 @@
+/* Styles owned by Courses.jsx. Shared class names use zero-specificity page scopes. */
+
+:where(.courses-page) .courses-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.courses-page {
+  min-height: 100vh;
+  background: var(--learnova-surface);
+}
+
+.courses-header {
+  text-align: center;
+  padding: 90px 20px 60px;
+  background: var(--learnova-bg);
+}
+
+.courses-header span {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.courses-header h1 {
+  margin: 12px 0;
+  font-size: 44px;
+}
+
+.courses-header p {
+  max-width: 650px;
+  margin: 0 auto;
+  line-height: 1.7;
+  color: var(--learnova-muted);
+}
+
+.all-courses {
+  padding: 32px 40px 60px;
+}
+
+.all-courses .courses-grid {
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+@media (max-width: 900px) {
+  .courses-header h1 {
+    font-size: 38px;
+  }
+
+  .all-courses {
+    padding: 28px 25px 50px;
+  }
+}
+
+@media (max-width: 600px) {
+  .courses-header {
+    padding: 60px 20px 45px;
+  }
+
+  .courses-header h1 {
+    font-size: 30px;
+  }
+
+  .courses-header p {
+    font-size: 14px;
+  }
+
+  .all-courses {
+    padding: 24px 20px 40px;
+  }
+}
+
+.catalog-tools { max-width: 1320px; margin: 0 auto; display: grid; grid-template-columns: 2fr repeat(4, minmax(0, 1fr)); gap: 12px; padding: 18px; border: 1px solid var(--learnova-border); border-radius: 8px; background: var(--learnova-bg); }
+.catalog-tools label { display: grid; gap: 7px; min-width: 0; font-size: 12px; font-weight: 600; color: var(--learnova-navy); }
+.catalog-tools input, .catalog-tools select { width: 100%; min-width: 0; padding: 11px 10px; border: 1px solid var(--learnova-border); border-radius: 5px; background: var(--learnova-surface); color: var(--learnova-text); font: inherit; font-weight: 400; }
+.catalog-tools :is(input, select):focus-visible { outline: 2px solid var(--learnova-focus); outline-offset: 2px; border-color: var(--learnova-primary); }
+.catalog-results { display: flex; justify-content: space-between; align-items: center; max-width: 1320px; margin: 18px auto; font-size: 12px; color: var(--learnova-muted); }
+.catalog-results p { margin: 0; }
+.catalog-results button, .catalog-empty button { padding: 7px 10px; border: 1px solid var(--learnova-border); border-radius: 5px; background: var(--learnova-surface); color: var(--learnova-primary); cursor: pointer; }
+.catalog-empty { max-width: 1320px; margin: 0 auto; text-align: center; padding: 40px 20px; background: var(--learnova-bg); border-radius: 8px; }
+.catalog-empty h2 { font-size: 20px; color: var(--learnova-navy); }
+.catalog-empty p { color: var(--learnova-muted); }
+@media (max-width: 1199px) { :where(.courses-page) .courses-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } .catalog-tools { grid-template-columns: repeat(4, minmax(0, 1fr)); } .catalog-search { grid-column: 1 / -1; } }
+@media (max-width: 900px) { :where(.courses-page) .courses-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .catalog-tools { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 600px) { :where(.courses-page) .courses-grid { grid-template-columns: minmax(0, 1fr); } }

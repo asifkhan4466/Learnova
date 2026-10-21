@@ -1,0 +1,23 @@
+import type { LegacyValue } from "../../../lib/legacy-types";
+import useCategories, { addCategory, removeCategory } from "../../utils/useCategories";
+import { useRef, useState } from "react";
+import useCourses from "../../utils/useCourses";
+import PublicIcon from "../../components/PublicIcon";
+import AdminSummary, { AdminHeading } from "../../components/AdminSummary";
+
+export default function Categories(){
+ const courses=useCourses(), dialog=useRef<LegacyValue>(null), addDialog=useRef<LegacyValue>(null);
+ const [layout,setLayout]=useState("grid");
+ const [search,setSearch]=useState(""),[status,setStatus]=useState(""),[selected,setSelected]=useState("");
+ const [name,setName]=useState(""),[message,setMessage]=useState("");
+ const categories=useCategories().map((name: LegacyValue)=>({name,courses:courses.filter((c: LegacyValue)=>c.category===name)}));
+ const visible=categories.filter((c: LegacyValue)=>c.name.toLowerCase().includes(search.trim().toLowerCase())&&(!status||(c.courses.some((v: LegacyValue)=>v.status==="Published")?"Active":"Inactive")===status));
+ return <section className="sa-page sa-categories"><AdminHeading title="Categories" subtitle="Organize and manage course categories." icon="database"><button className="sac-primary" onClick={()=>{setName("");setMessage("");addDialog.current.showModal();}}>+ Add Category</button></AdminHeading>
+ <AdminSummary items={[["Total Categories",categories.length,"database"],["Active Categories",categories.filter((c: LegacyValue)=>c.courses.some((v: LegacyValue)=>v.status==="Published")).length,"check"],["Courses Mapped",courses.length,"book"],["Featured Courses",courses.filter((c: LegacyValue)=>c.featured).length,"star"]]}/>
+ {message&&<p role="status">{message}</p>}
+ <section className="sac-content">
+ <div className="sa-toolbar"><label className="sac-search"><PublicIcon name="search"/><input type="search" placeholder="Search categories..." aria-label="Search categories" value={search} onChange={(e: LegacyValue)=>setSearch(e.target.value)}/></label><select aria-label="Category status" value={status} onChange={(e: LegacyValue)=>setStatus(e.target.value)}><option value="">All Statuses</option><option>Active</option><option>Inactive</option></select><div className="sac-layout" role="group" aria-label="Category display"><button aria-label="Grid view" aria-pressed={layout==="grid"} onClick={()=>setLayout("grid")}><PublicIcon name="database"/></button><button aria-label="List view" aria-pressed={layout==="list"} onClick={()=>setLayout("list")}><PublicIcon name="menu"/></button></div></div>
+ <div className={`sa-category-grid${layout==="list"?" sac-list":""}`}>{visible.map((c: LegacyValue,i: LegacyValue)=><article className={`sa-panel sa-summary-tone-${i%4}`} key={c.name}><span className="sa-category-icon"><PublicIcon name={c.courses[0]?.visual || "book"}/></span><h2>{c.name}</h2><p>Explore courses and learning materials in {c.name.toLowerCase()}.</p><div className="sa-category-meta"><span>{c.courses.length} Courses</span><span className="sa-status" data-status={c.courses.some((v: LegacyValue)=>v.status==="Published")?"Active":"Inactive"}>{c.courses.some((v: LegacyValue)=>v.status==="Published")?"Active":"Inactive"}</span></div><div className="sac-actions"><button onClick={()=>{setSelected(c.name);dialog.current.showModal();}} aria-label={`View ${c.name}`}><PublicIcon name="search"/>View Courses</button><button onClick={()=>{try{if(!window.confirm(`Remove ${c.name}?`))return;removeCategory(c.name);setMessage("Category removed.");}catch(error: LegacyValue){setMessage(error.message);}}} aria-label={`Remove ${c.name}`}>Remove</button></div></article>)}</div>{!visible.length&&<p>No matching categories.</p>}
+ <p className="sa-muted">Showing {visible.length} of {categories.length} categories</p></section><dialog ref={addDialog} aria-labelledby="sac-add-title"><h2 id="sac-add-title">Add Category</h2> <form className="sa-toolbar" onSubmit={(event: LegacyValue)=>{event.preventDefault();try{addCategory(name);setName("");addDialog.current.close();setMessage("Category added.");}catch(error: LegacyValue){setMessage(error.message);}}}><input required aria-label="New category name" placeholder="New category name" value={name} onChange={(event: LegacyValue)=>setName(event.target.value)}/><button className="sa-primary" type="submit">Add Category</button></form>{message&&<p role="status">{message}</p>}
+<button onClick={()=>addDialog.current.close()}>Cancel</button></dialog><dialog ref={dialog}><h2>{selected}</h2><ul>{courses.filter((c: LegacyValue)=>c.category===selected).map((c: LegacyValue)=><li key={c.id}>{c.title} &middot; {c.status}</li>)}</ul><form method="dialog"><button>Close</button></form></dialog></section>;
+}

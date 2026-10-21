@@ -1,0 +1,187 @@
+/* Styles owned by Assignments.jsx. Shared class names use zero-specificity page scopes. */
+
+.assignments-page {
+  width: 100%;
+}
+
+.assignments-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 28px;
+}
+
+.assignments-header h1 {
+  margin: 0 0 8px;
+  font-size: 30px;
+  color: var(--learnova-ink);
+}
+
+.assignments-header p {
+  margin: 0;
+  color: var(--learnova-muted);
+  font-size: 15px;
+}
+
+.assignment-count {
+  background: var(--learnova-light);
+  color: var(--learnova-ink);
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.assignments-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.assignment-card {
+  background: var(--learnova-surface);
+  border: 1px solid var(--learnova-border);
+  border-radius: 12px;
+  padding: 22px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  transition: 0.2s ease;
+}
+
+.assignment-card:hover {
+  box-shadow: 0 6px 18px var(--learnova-shadow);
+  transform: translateY(-2px);
+}
+
+.assignment-icon {
+  width: 50px;
+  height: 50px;
+  min-width: 50px;
+  border-radius: 10px;
+  background: var(--learnova-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--learnova-ink);
+}
+
+.assignment-info {
+  flex: 1;
+}
+
+.assignment-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 6px;
+}
+
+.assignment-title h2 {
+  margin: 0;
+  font-size: 18px;
+  color: var(--learnova-ink);
+}
+
+.assignment-title span {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.assignment-title .pending {
+  background: var(--learnova-light);
+  color: var(--learnova-muted);
+}
+
+.assignment-title .submitted {
+  background: var(--learnova-light);
+  color: var(--learnova-primary);
+}
+
+.assignment-info > p {
+  margin: 0 0 10px;
+  color: var(--learnova-muted);
+  font-size: 14px;
+}
+
+.assignment-details {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.assignment-details span {
+  color: var(--learnova-muted);
+  font-size: 13px;
+}
+
+.assignment-action {
+  min-width: 145px;
+}
+
+.view-assignment-btn {
+  width: 100%;
+  border: none;
+  background: var(--learnova-primary);
+  color: var(--learnova-surface);
+  padding: 11px 15px;
+  border-radius: 7px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+
+.view-assignment-btn:hover {
+  background: var(--learnova-primary);
+}
+
+@media (max-width: 700px) {
+  .assignments-header {
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .assignments-header h1 {
+    font-size: 25px;
+  }
+
+  .assignment-card {
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 18px;
+  }
+
+  .assignment-info {
+    min-width: calc(100% - 70px);
+  }
+
+  .assignment-title {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 7px;
+  }
+
+  .assignment-action {
+    width: 100%;
+    margin-left: 68px;
+  }
+
+  .view-assignment-btn {
+    width: auto;
+    padding: 10px 16px;
+  }
+}
+
+/* Learnova interaction polish; geometry is unchanged. */
+:where(.assignments-page) :is(input, select, textarea):focus-visible { border-color: var(--learnova-primary); outline: 2px solid var(--learnova-focus); outline-offset: 2px; }
+:where(.assignments-page) :is(button, a):focus-visible { outline: 2px solid var(--learnova-primary); outline-offset: 3px; }
+:where(.assignments-page) :is(input, button, select, textarea):disabled { opacity: .65; cursor: not-allowed; }
+:where(.assignments-page) input[type="checkbox"] { accent-color: var(--learnova-primary); }
+
+.assignments-page dialog{width:480px;max-width:calc(100vw - 40px);box-sizing:border-box;border:1px solid var(--learnova-border);border-radius:12px;padding:24px;color:var(--learnova-navy)}.assignments-page dialog::backdrop{background:#031e5060}.assignments-page dialog dl{display:grid;gap:14px}.assignments-page dialog dt{font-size:12px;color:var(--learnova-muted)}.assignments-page dialog dd{margin:5px 0}.assignments-page dialog button{padding:9px 16px;border:1px solid var(--learnova-border);border-radius:6px;background:var(--learnova-light);color:var(--learnova-primary);cursor:pointer}
+.assignment-submit-form{display:grid;gap:12px;margin:20px 0}.assignment-submit-form label{display:grid;gap:6px;font-size:12px;color:var(--learnova-muted)}.assignment-submit-form input,.assignment-submit-form textarea{padding:9px;border:1px solid var(--learnova-border);border-radius:6px;font:inherit;color:var(--learnova-navy)}.assignment-submit-form button{background:var(--learnova-primary)!important;color:white!important;border:0!important}.assignment-submitted-file{font-size:12px;color:var(--learnova-primary)}

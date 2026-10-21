@@ -1,0 +1,40 @@
+.course-card {
+  min-width: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: var(--learnova-surface);
+  border: 1px solid var(--learnova-border);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px var(--learnova-shadow);
+  transition: transform .18s ease, border-color .18s ease;
+}
+.course-card:hover { transform: translateY(-3px); border-color: var(--learnova-primary); }
+.course-card .course-image { position: relative; height: 165px; flex-shrink: 0; overflow: hidden; background: var(--learnova-light); }
+.course-card .course-image img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform .22s ease; }
+.course-card:hover .course-image img { transform: scale(1.035); }
+.course-card .course-image img.course-image-fallback { object-fit: contain; padding: 18px; }
+.course-card-badge { position: absolute; top: 12px; left: 12px; padding: 5px 8px; border-radius: 4px; background: var(--learnova-surface); color: var(--learnova-primary); font-size: 10px; font-weight: 700; }
+.course-card .course-content { padding: 17px; display: flex; flex-direction: column; flex: 1; min-width: 0; }
+.course-card .course-category { color: var(--learnova-primary); font-size: 11px; font-weight: 600; }
+.course-card h3 { color: var(--learnova-navy); font-size: 17px; line-height: 1.4; min-height: 2.8em; margin: 8px 0 6px; overflow-wrap: anywhere; }
+.course-card .course-teacher { margin: 0 0 12px; color: var(--learnova-muted); font-size: 12px; line-height: 1.5; }
+.course-rating { display: flex; align-items: center; flex-wrap: wrap; gap: 6px 8px; font-size: 11px; color: var(--learnova-muted); }
+.course-rating strong { display: inline-flex; gap: 4px; align-items: center; color: var(--learnova-navy); }
+.course-rating .public-icon { width: 13px; height: 13px; color: var(--learnova-primary); fill: currentColor; }
+.course-card .course-info { display: flex; flex-wrap: wrap; align-items: center; gap: 7px 12px; color: var(--learnova-muted); font-size: 11px; margin: 12px 0 16px; }
+.course-card .course-info span { display: inline-flex; align-items: center; gap: 4px; }
+.course-card .course-info .public-icon { width: 13px; height: 13px; }
+.course-card-bottom { margin-top: auto; border-top: 1px solid var(--learnova-border); padding-top: 13px; }
+.course-card .course-price { display: flex; align-items: center; gap: 8px; margin: 0 0 12px; }
+.course-card .discount-price { font-size: 20px; color: var(--learnova-navy); }
+.course-card .original-price { color: var(--learnova-muted); font-size: 12px; }
+.course-card .course-btn { display: flex; justify-content: center; align-items: center; gap: 8px; padding: 10px 12px; border-radius: 5px; background: var(--learnova-primary); color: var(--learnova-white); font-size: 12px; font-weight: 600; text-decoration: none; }
+.course-card .course-btn .public-icon { width: 14px; height: 14px; }
+.course-card .course-btn:hover { background: var(--learnova-navy); }
+.course-card .course-btn:focus-visible { outline: 2px solid var(--learnova-primary); outline-offset: 3px; }
+@media (prefers-reduced-motion: reduce) { .course-card, .course-card .course-image img { transition: none; } 
+.course-card:hover, .course-card:hover .course-image img { transform: none; } }
+
+.course-card button.course-btn:disabled { border: 0; font-family: inherit; opacity: .65; cursor: not-allowed; }

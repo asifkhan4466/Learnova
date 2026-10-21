@@ -1,0 +1,269 @@
+/* Styles owned by SubAdminLayout.jsx. Shared class names use zero-specificity page scopes. */
+
+.subadmin-layout {
+  min-height: 100vh;
+  display: flex;
+  background: var(--learnova-bg);
+}
+
+.subadmin-sidebar {
+  width: 250px;
+  min-height: 100vh;
+  background: var(--learnova-primary);
+  color: var(--learnova-surface);
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  z-index: 100;
+}
+
+.subadmin-logo {
+  height: 75px;
+  display: flex;
+  align-items: center;
+  padding: 0 25px;
+  font-size: 23px;
+  font-weight: 700;
+  border-bottom: 1px solid var(--learnova-primary);
+}
+
+.subadmin-nav {
+  flex: 1;
+  padding: 18px 12px;
+  overflow-y: auto;
+}
+
+.subadmin-nav a,
+.subadmin-sidebar-bottom a {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  color: var(--learnova-on-dark);
+  text-decoration: none;
+  padding: 12px 14px;
+  margin-bottom: 4px;
+  border-radius: 7px;
+  font-size: 14px;
+  transition: 0.2s ease;
+}
+
+.subadmin-nav a span,
+.subadmin-sidebar-bottom a span {
+  width: 20px;
+  min-width: 20px;
+  text-align: center;
+  font-size: 16px;
+}
+
+.subadmin-nav a:hover,
+.subadmin-sidebar-bottom a:hover {
+  background: var(--learnova-primary);
+  color: var(--learnova-surface);
+}
+
+.subadmin-nav a.active {
+  background: var(--learnova-surface);
+  color: var(--learnova-ink);
+  font-weight: 600;
+}
+
+.subadmin-sidebar-bottom {
+  padding: 15px 12px;
+  border-top: 1px solid var(--learnova-primary);
+}
+
+.subadmin-content {
+  width: calc(100% - 250px);
+  margin-left: 250px;
+  min-height: 100vh;
+}
+
+.subadmin-topbar {
+  height: 75px;
+  background: var(--learnova-surface);
+  border-bottom: 1px solid var(--learnova-border);
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.subadmin-topbar h2 {
+  margin: 0 0 4px;
+  font-size: 18px;
+  color: var(--learnova-ink);
+}
+
+.subadmin-topbar p {
+  margin: 0;
+  color: var(--learnova-muted);
+  font-size: 12px;
+}
+
+.subadmin-user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.subadmin-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--learnova-primary);
+  color: var(--learnova-surface);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.subadmin-user strong {
+  display: block;
+  color: var(--learnova-ink);
+  font-size: 13px;
+}
+
+.subadmin-user span {
+  display: block;
+  color: var(--learnova-muted);
+  font-size: 11px;
+  margin-top: 3px;
+}
+
+.subadmin-main {
+  padding: 30px;
+}
+
+@media (max-width: 1100px) {
+  .subadmin-sidebar {
+    width: 220px;
+  }
+
+  .subadmin-content {
+    width: calc(100% - 220px);
+    margin-left: 220px;
+  }
+}
+
+@media (max-width: 900px) {
+  .subadmin-sidebar {
+    width: 210px;
+  }
+
+  .subadmin-content {
+    width: calc(100% - 210px);
+    margin-left: 210px;
+  }
+
+  .subadmin-main {
+    padding: 25px;
+  }
+}
+
+@media (max-width: 700px) {
+  .subadmin-sidebar {
+    width: 70px;
+  }
+
+  .subadmin-logo {
+    justify-content: center;
+    padding: 0;
+    font-size: 0;
+  }
+
+  .subadmin-logo::before {
+    content: none;
+    font-size: 22px;
+    font-weight: 700;
+  }
+
+  .subadmin-nav {
+    padding: 15px 8px;
+  }
+
+  .subadmin-nav a,
+  .subadmin-sidebar-bottom a {
+    justify-content: center;
+    padding: 12px 8px;
+  }
+
+  .subadmin-nav a {
+    font-size: 0;
+  }
+
+  .subadmin-nav a span {
+    font-size: 17px;
+  }
+
+  .subadmin-sidebar-bottom a {
+    font-size: 0;
+  }
+
+  .subadmin-sidebar-bottom a span {
+    font-size: 17px;
+  }
+
+  .subadmin-content {
+    width: calc(100% - 70px);
+    margin-left: 70px;
+  }
+
+  .subadmin-topbar {
+    padding: 0 18px;
+  }
+
+  .subadmin-topbar h2 {
+    font-size: 16px;
+  }
+
+  .subadmin-user div:last-child {
+    display: none;
+  }
+
+  .subadmin-main {
+    padding: 20px;
+  }
+}
+
+.subadmin-logo > img {
+  display: block;
+  height: 60px;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+@media (max-width: 700px) {
+  .subadmin-logo > img {
+    height: 48px;
+  }
+}
+
+/* Shared Learnova sidebar palette, owned by this layout. */
+.subadmin-sidebar { background: var(--learnova-navy); color: var(--learnova-on-dark); border-color: var(--learnova-navy); }
+.subadmin-logo { background: var(--learnova-surface); border-color: var(--learnova-border); }
+.subadmin-nav a, .subadmin-sidebar-bottom a { color: var(--learnova-on-dark); }
+.subadmin-nav a:hover, .subadmin-sidebar-bottom a:hover { background: var(--learnova-primary); color: var(--learnova-white); }
+.subadmin-nav a.active { background: var(--learnova-primary); color: var(--learnova-white); box-shadow: inset 3px 0 var(--learnova-cyan); }
+.subadmin-sidebar-bottom { border-color: color-mix(in srgb, var(--learnova-cyan) 20%, var(--learnova-navy)); }
+
+.subadmin-avatar img { width:100%; height:100%; object-fit:cover; border-radius:50%; display:block; }
+.subadmin-sidebar{background:#031e50}.subadmin-nav svg,.subadmin-sidebar-bottom svg{width:18px;height:18px;flex-shrink:0}.subadmin-nav a{font-size:13px;padding:10px 13px;border-radius:6px}.subadmin-nav a.active{background:#0068ff;color:white}.subadmin-topbar{background:linear-gradient(110deg,#f8fcff,#edf7ff);border-bottom:1px solid #dceaff}.subadmin-topbar .subadmin-avatar{background:#0068ff;color:white}.subadmin-content{background:#f4faff}.subadmin-main{padding:22px}.subadmin-logo{border-bottom:1px solid #25416d}.subadmin-nav{scrollbar-width:thin;scrollbar-color:#355385 transparent}
+/* Reference-style shell, scoped to the Sub Admin portal. */
+.subadmin-layout .subadmin-sidebar{width:230px;background:#031e50;min-height:0}.subadmin-layout .subadmin-content{margin-left:230px;width:calc(100% - 230px);display:flex;flex-direction:column;min-width:0}.subadmin-layout .subadmin-logo{height:125px;flex-shrink:0;flex-direction:column;justify-content:center;gap:8px;padding:10px 18px;box-sizing:border-box;background:#031e50}.subadmin-layout .subadmin-logo img{height:78px;width:auto;max-width:100%;object-fit:contain;background:white;border-radius:6px;padding:3px 12px;box-sizing:border-box}.subadmin-layout .subadmin-logo small{font-size:14px;color:#eef5ff;font-weight:500}.subadmin-layout .subadmin-nav{padding:12px 10px}.subadmin-layout .subadmin-nav a{padding:10px 12px;min-height:38px;box-sizing:border-box;gap:12px;font-size:12px}.subadmin-layout .sa-nav-label{width:auto;min-width:0;font-size:inherit;text-align:left}.subadmin-layout .subadmin-nav a.active{background:#0068ff;color:white;box-shadow:0 3px 9px #0055ee20}.subadmin-layout .subadmin-sidebar-bottom{padding:10px;border-color:#25416d}.subadmin-layout .subadmin-topbar{height:65px;flex-shrink:0;gap:22px;padding:0 24px;justify-content:flex-start;background:linear-gradient(110deg,#f8fcff,#edf7ff)}.sa-menu-toggle{border:0;background:transparent;color:#244780;padding:5px;cursor:pointer}.sa-menu-toggle svg{width:21px;height:21px}.sa-header-search{position:relative;width:min(470px,48%);margin-right:auto}.sa-header-search label{display:flex;align-items:center;gap:10px;border:1px solid #dceaff;border-radius:25px;background:white;padding:0 12px}.sa-header-search svg{width:18px;height:18px;color:#5774a4;flex-shrink:0}.sa-header-search input{width:100%;min-width:0;border:0;background:transparent;padding:11px 0;font:inherit;font-size:12px;color:#264477}.sa-search-results{position:absolute;top:calc(100% + 6px);left:0;right:0;background:white;border:1px solid #dceaff;border-radius:8px;z-index:110;max-height:300px;overflow:auto;box-shadow:0 6px 18px #031e5015}.sa-search-results a{display:block;padding:12px;color:#244780;text-decoration:none;font-size:12px}.sa-search-results a:hover{background:#eff6ff}.sa-search-results p{padding:12px;font-size:12px}.sa-notifications-link svg{width:22px;height:22px;color:#244780}.subadmin-layout .subadmin-user{text-decoration:none;gap:12px;min-width:0}.subadmin-layout .subadmin-user strong{color:#07114d;font-size:13px}.subadmin-layout .subadmin-user>div:last-child span{color:#6179a8;font-size:11px}.subadmin-layout .subadmin-avatar{height:42px;width:42px;flex-shrink:0;overflow:hidden}.subadmin-layout .subadmin-main{flex:1;min-width:0}.sa-footer{display:flex;justify-content:space-between;gap:16px;padding:18px 24px;border-top:1px solid #dfedff;color:#6179a8;font-size:11px}.sa-footer a{color:#31538d;text-decoration:none}.subadmin-layout.sa-collapsed .subadmin-sidebar{width:70px}.subadmin-layout.sa-collapsed .subadmin-content{margin-left:70px;width:calc(100% - 70px)}.sa-collapsed .sa-nav-label,.sa-collapsed .subadmin-logo small{display:none}.subadmin-layout.sa-collapsed .subadmin-logo{padding:5px}.subadmin-layout.sa-collapsed .subadmin-logo img{padding:2px;width:58px;height:auto}.sa-collapsed .subadmin-nav a{justify-content:center}.subadmin-layout :is(button,input,a):focus-visible{outline:2px solid #6aa8ff;outline-offset:2px}
+@media(max-width:750px){.subadmin-layout .subadmin-sidebar{width:70px}.subadmin-layout .subadmin-content{margin-left:70px;width:calc(100% - 70px)}.subadmin-layout .sa-nav-label,.subadmin-layout .subadmin-logo small{display:none}.subadmin-layout .subadmin-logo{padding:5px;height:90px}.subadmin-layout .subadmin-logo img{padding:2px;width:58px;height:auto}.subadmin-layout .subadmin-nav a{justify-content:center;padding:10px 5px}.subadmin-layout .subadmin-topbar{padding:0 10px;gap:10px}.sa-menu-toggle{display:none}.sa-header-search{flex:1;width:auto;min-width:0}.subadmin-user>div:last-child{display:none}.subadmin-layout .subadmin-avatar{height:34px;width:34px}.sa-footer{padding:14px 12px;flex-wrap:wrap}}
+.subadmin-layout .sa-profile-chevron{width:18px;height:18px;margin-left:20px;color:#36558c;flex-shrink:0}
+@media(max-width:750px){.subadmin-layout .sa-profile-chevron{display:none}.subadmin-layout .subadmin-user>div:nth-child(2){display:none}}
+.subadmin-layout .subadmin-user>div:nth-child(2) span{display:block;color:#6179a8;font-size:11px}
+.sa-footer nav{display:flex;gap:14px;align-items:center}.sa-footer nav>span{padding-right:14px;border-right:1px solid #dceaff}.subadmin-layout .subadmin-main{padding:24px;background:linear-gradient(120deg,#f8fcff,#f2faff)}.subadmin-layout .subadmin-nav a{margin-bottom:2px;min-height:36px;padding:8px 12px}.subadmin-layout .subadmin-logo{height:115px}.subadmin-layout .subadmin-logo small{align-self:flex-start;font-weight:600;font-size:14px}.subadmin-layout .subadmin-nav{padding-top:10px}.subadmin-layout .subadmin-topbar{position:sticky;top:0;z-index:80}.subadmin-layout .sa-notifications-link{padding-right:20px;border-right:1px solid #dceaff}.subadmin-layout .sa-footer{background:#f8fcff}
+@media(max-width:750px){.subadmin-layout .subadmin-main{padding:16px 12px}.subadmin-layout .subadmin-logo{height:85px}.subadmin-layout .sa-notifications-link{padding-right:8px}.subadmin-layout .subadmin-nav a{padding:10px 5px}.subadmin-layout .subadmin-logo small{display:none}}
+/* Horizontal lockup uses the original logo artwork; the source image is unchanged. */
+.subadmin-layout .sa-brand-lockup{display:flex;align-items:center;gap:6px;align-self:flex-start;margin-bottom:6px}.subadmin-layout .sa-brand-symbol{position:relative;display:block;overflow:hidden;width:53px;height:56px;flex-shrink:0}.subadmin-layout .sa-brand-symbol img{position:absolute;width:104px!important;height:104px!important;max-width:none!important;left:-25px;top:-9px;padding:0!important;background:transparent!important;border-radius:0!important}.subadmin-layout .sa-brand-wordmark strong{display:block;color:white;font-size:23px;line-height:1.2;font-weight:600;letter-spacing:-.4px}.subadmin-layout .sa-brand-wordmark small{display:block;color:#d8e9ff;font-size:8px;font-weight:400;margin-top:3px}.subadmin-layout .subadmin-logo{padding-left:14px;padding-right:10px;gap:4px}.subadmin-layout.sa-collapsed .sa-brand-wordmark{display:none}.subadmin-layout.sa-collapsed .sa-brand-lockup{align-self:center;margin:0}.subadmin-layout .subadmin-nav a.active{background:#0068ff!important;color:white!important}.sa-dashboard .sa-summary article{padding:16px}.sa-dashboard .sa-summary article>span{width:50px;height:50px}.sa-dashboard .sa-list-row{padding:10px 0}.sa-charts .sa-line-chart{max-height:230px}.sa-charts .sa-distribution{min-height:230px}
+@media(max-width:750px){.subadmin-layout .sa-brand-wordmark{display:none}.subadmin-layout .sa-brand-lockup{align-self:center;margin:0}.subadmin-layout .subadmin-logo{padding:5px}}
+
+.subadmin-layout .subadmin-nav a.active{background:var(--sa-accent)!important}.subadmin-layout .subadmin-avatar,.subadmin-layout .sa-primary,.subadmin-layout .sa-settings-nav a:first-child{background:var(--sa-accent);color:white}.subadmin-layout input[type="checkbox"]{accent-color:var(--sa-accent)}

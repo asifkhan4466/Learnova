@@ -1,0 +1,222 @@
+/* Styles owned by About.jsx. Shared class names use zero-specificity page scopes. */
+
+:where(.about-page) .primary-btn {
+  padding: 13px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+:where(.about-page) .primary-btn {
+  background: var(--learnova-primary);
+  color: var(--learnova-surface);
+}
+
+:where(.about-page) .primary-btn:hover {
+  opacity: 0.85;
+}
+
+@media (max-width: 768px) {
+  :where(.about-page) .primary-btn {
+    display: inline-block;
+  }
+}
+
+:where(.about-page) .section-heading {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto 50px;
+}
+
+:where(.about-page) .section-heading span {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+:where(.about-page) .section-heading h2 {
+  font-size: 38px;
+  margin: 12px 0;
+}
+
+:where(.about-page) .section-heading p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+:where(.about-page) .section-label {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.about-page {
+  background: var(--learnova-surface);
+  min-height: 100vh;
+}
+
+.about-header {
+  text-align: center;
+  padding: 90px 20px 60px;
+  background: var(--learnova-bg);
+}
+
+.about-header span {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.about-header h1 {
+  font-size: 44px;
+  margin: 15px 0;
+}
+
+.about-header p {
+  max-width: 700px;
+  margin: auto;
+  color: var(--learnova-muted);
+  line-height: 1.7;
+}
+
+.about-content {
+  max-width: 1200px;
+  margin: auto;
+  padding: 80px 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.about-text h2 {
+  font-size: 36px;
+  margin: 15px 0 20px;
+}
+
+.about-text p {
+  color: var(--learnova-muted);
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+.about-stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.about-stat-card {
+  padding: 30px;
+  border: 1px solid var(--learnova-border);
+  border-radius: 12px;
+  text-align: center;
+}
+
+.about-stat-card h3 {
+  font-size: 32px;
+  margin: 0 0 8px;
+}
+
+.about-stat-card p {
+  margin: 0;
+  color: var(--learnova-muted);
+}
+
+.about-values {
+  padding: 80px 40px;
+  background: var(--learnova-bg);
+}
+
+.values-grid {
+  max-width: 1100px;
+  margin: 40px auto 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.value-card {
+  background: var(--learnova-surface);
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  border: 1px solid var(--learnova-border);
+}
+
+.value-icon {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.value-card p {
+  color: var(--learnova-muted);
+  line-height: 1.6;
+}
+
+.about-cta {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.about-cta h2 {
+  font-size: 34px;
+  margin-bottom: 15px;
+}
+
+.about-cta p {
+  color: var(--learnova-muted);
+  margin-bottom: 25px;
+}
+
+@media (max-width: 900px) {
+  .about-content {
+    grid-template-columns: 1fr;
+    padding: 60px 25px;
+  }
+
+  .values-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-header h1 {
+    font-size: 38px;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-header {
+    padding: 60px 20px 45px;
+  }
+
+  .about-header h1 {
+    font-size: 30px;
+  }
+
+  .about-header p {
+    font-size: 14px;
+  }
+
+  .about-content {
+    padding: 50px 20px;
+  }
+
+  .about-text h2 {
+    font-size: 28px;
+  }
+
+  .about-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .about-values {
+    padding: 60px 20px;
+  }
+
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-cta h2 {
+    font-size: 28px;
+  }
+}
+
+:where(.about-page) a { color: var(--learnova-primary); }

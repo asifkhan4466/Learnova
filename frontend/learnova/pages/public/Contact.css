@@ -1,0 +1,186 @@
+/* Styles owned by Contact.jsx. Shared class names use zero-specificity page scopes. */
+
+:where(.contact-page) .section-label {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+:where(.contact-page) .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+:where(.contact-page) .form-group label {
+  font-weight: 600;
+}
+
+:where(.contact-page) .form-group input {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid var(--learnova-border);
+  border-radius: 8px;
+  outline: none;
+  font-size: 15px;
+}
+
+:where(.contact-page) .form-group input:focus {
+  border-color: var(--learnova-primary);
+}
+
+.contact-page {
+  min-height: 100vh;
+  background: var(--learnova-surface);
+}
+
+.contact-header {
+  text-align: center;
+  padding: 90px 20px 60px;
+  background: var(--learnova-bg);
+}
+
+.contact-header span {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.contact-header h1 {
+  font-size: 44px;
+  margin: 15px 0;
+}
+
+.contact-header p {
+  max-width: 650px;
+  margin: auto;
+  color: var(--learnova-muted);
+  line-height: 1.7;
+}
+
+.contact-content {
+  max-width: 1100px;
+  margin: auto;
+  padding: 80px 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+}
+
+.contact-info h2 {
+  font-size: 34px;
+  margin: 15px 0;
+}
+
+.contact-info > p {
+  color: var(--learnova-muted);
+  line-height: 1.7;
+  margin-bottom: 35px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.contact-icon {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: var(--learnova-light);
+  font-size: 20px;
+}
+
+.contact-item h3 {
+  margin: 0 0 5px;
+}
+
+.contact-item p {
+  margin: 0;
+  color: var(--learnova-muted);
+}
+
+.contact-form-card {
+  padding: 35px;
+  border: 1px solid var(--learnova-border);
+  border-radius: 14px;
+  box-shadow: 0 8px 25px var(--learnova-shadow);
+}
+
+.contact-form-card h2 {
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.contact-form textarea {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid var(--learnova-border);
+  border-radius: 8px;
+  resize: vertical;
+  outline: none;
+}
+
+.contact-submit {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  background: var(--learnova-primary);
+  color: var(--learnova-surface);
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .contact-content {
+    grid-template-columns: 1fr;
+    padding: 60px 25px;
+  }
+
+  .contact-header h1 {
+    font-size: 38px;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-header {
+    padding: 60px 20px 45px;
+  }
+
+  .contact-header h1 {
+    font-size: 30px;
+  }
+
+  .contact-header p {
+    font-size: 14px;
+  }
+
+  .contact-content {
+    padding: 50px 20px;
+  }
+
+  .contact-info h2 {
+    font-size: 28px;
+  }
+
+  .contact-form-card {
+    padding: 25px 20px;
+  }
+}
+
+/* Learnova interaction polish; geometry is unchanged. */
+:where(.contact-page) :is(input, select, textarea):focus-visible { border-color: var(--learnova-primary); outline: 2px solid var(--learnova-focus); outline-offset: 2px; }
+:where(.contact-page) :is(button, a):focus-visible { outline: 2px solid var(--learnova-primary); outline-offset: 3px; }
+:where(.contact-page) :is(input, button, select, textarea):disabled { opacity: .65; cursor: not-allowed; }
+:where(.contact-page) input[type="checkbox"] { accent-color: var(--learnova-primary); }

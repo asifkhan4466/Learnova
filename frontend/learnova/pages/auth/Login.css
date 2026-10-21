@@ -1,0 +1,143 @@
+/* Styles owned by Login.jsx. Shared class names use zero-specificity page scopes. */
+
+.auth-page:where(:has(> .login-card)) {
+  min-height: 650px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  background: var(--learnova-bg);
+}
+
+.login-card {
+  width: 100%;
+  max-width: 450px;
+  padding: 40px;
+  background: var(--learnova-surface);
+  border: 1px solid var(--learnova-border);
+  border-radius: 14px;
+}
+
+:where(.login-card) .auth-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+:where(.login-card) .auth-header h1 {
+  margin: 0 0 12px;
+  font-size: 32px;
+}
+
+:where(.login-card) .auth-header p {
+  margin: 0;
+  color: var(--learnova-muted);
+  line-height: 1.6;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+:where(.login-card) .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+:where(.login-card) .form-group label {
+  font-weight: 600;
+}
+
+:where(.login-card) .form-group input {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid var(--learnova-border);
+  border-radius: 8px;
+  outline: none;
+  font-size: 15px;
+}
+
+:where(.login-card) .form-group input:focus {
+  border-color: var(--learnova-primary);
+}
+
+.form-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.form-options a {
+  color: var(--learnova-ink);
+  text-decoration: none;
+}
+
+.login-submit {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  background: var(--learnova-primary);
+  color: var(--learnova-surface);
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.login-submit:hover {
+  opacity: 0.85;
+}
+
+.register-link {
+  margin-top: 25px;
+  text-align: center;
+  color: var(--learnova-muted);
+  font-size: 14px;
+}
+
+.register-link a {
+  color: var(--learnova-primary);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.login-role-back {
+  display: block;
+  margin-top: 20px;
+  text-align: center;
+  color: var(--learnova-primary);
+  font-size: 14px;
+  text-decoration: none;
+}
+.login-role-back:hover { text-decoration: underline; }
+
+@media (max-width: 600px) {
+  .auth-page:where(:has(> .login-card)) {
+    padding: 30px 15px;
+  }
+}
+
+@media (max-width: 400px) {
+  .auth-page:where(:has(> .login-card)) {
+    padding: 20px 10px;
+  }
+}
+
+/* Learnova interaction polish; geometry is unchanged. */
+:where(.auth-page) :is(input, select, textarea):focus-visible { border-color: var(--learnova-primary); outline: 2px solid var(--learnova-focus); outline-offset: 2px; }
+:where(.auth-page) :is(button, a):focus-visible { outline: 2px solid var(--learnova-primary); outline-offset: 3px; }
+:where(.auth-page) :is(input, button, select, textarea):disabled { opacity: .65; cursor: not-allowed; }
+:where(.auth-page) input[type="checkbox"] { accent-color: var(--learnova-primary); }
+
+.login-card { box-shadow: 0 8px 28px var(--learnova-shadow); }
+:where(.login-card) h1 { color: var(--learnova-navy); }
+:where(.login-card) a { color: var(--learnova-primary); }

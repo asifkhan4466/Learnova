@@ -1,0 +1,31 @@
+﻿@import "./AccountTables.css";
+.admin-teachers.admin-teachers .as-stats { grid-template-columns: repeat(4,minmax(0,1fr)); }
+.admin-teachers .at-panel { background: white; padding: 18px; border: 1px solid var(--as-border); border-radius: 10px; }
+.admin-teachers .at-heading { display: flex; align-items: center; gap: 15px; margin-bottom: 18px; }
+.admin-teachers .at-heading h2 { margin: 0 0 5px; font-size: 20px; }
+.admin-teachers .at-heading p { margin: 0; font-size: 13px; color: var(--as-muted); }
+.admin-teachers .at-heading .as-search { margin-left: auto; flex: 0 1 430px; }
+.admin-teachers .at-filter { display: flex; align-items: center; gap: 10px; margin-bottom: 15px; }
+.admin-teachers .at-tags { display: flex; gap: 6px; flex-wrap: wrap; }
+.admin-teachers .at-tags span { background: #eaf3ff; color: #0061ff; padding: 7px; border-radius: 5px; font-size: 11px; }
+.admin-teachers .at-tags span:nth-child(2n) { background: #f2edff; color: #6036de; }
+.admin-teachers .at-rating { display: inline-flex; align-items: center; gap: 8px; color: var(--as-ink); font-weight: 600; }
+.admin-teachers .at-rating svg { width: 17px; height: 17px; fill: #ffb11d; stroke: #ffb11d; }
+.admin-teachers .at-view { padding: 8px 20px; color: #0065ff; background: #eff6ff; }
+.admin-teachers table { min-width: 1030px; }
+@media(max-width:1100px) { .admin-teachers.admin-teachers .as-stats { grid-template-columns: repeat(2,minmax(0,1fr)); } .admin-teachers .at-heading { flex-wrap: wrap; } .admin-teachers .at-heading .as-search { margin-left: 0; } }
+@media(max-width:480px) { .admin-teachers.admin-teachers .as-stats { grid-template-columns: minmax(0,1fr); } }
+
+.admin-teachers .at-actions { display: flex; gap: 6px; align-items: center; }
+.admin-teachers .at-actions button { padding: 8px 10px; }
+.admin-teachers .at-delete, .admin-teachers .at-edit-error { color: #c9233f; }
+.admin-teachers .at-edit-dialog { width: min(600px, calc(100vw - 32px)); }
+.admin-teachers .at-edit-fields { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 15px; padding: 0; margin: 0; border: 0; }
+.admin-teachers .at-edit-fields label { display: flex; flex-direction: column; gap: 7px; font-size: 13px; }
+.admin-teachers .at-edit-fields :is(input,select,textarea) { padding: 10px; border: 1px solid var(--as-border); border-radius: 7px; min-width: 0; font: inherit; color: inherit; }
+.admin-teachers .at-photo-preview { width: 64px; height: 64px; object-fit: cover; border-radius: 50%; }
+.admin-teachers .at-edit-note { color: var(--as-muted); font-size: 12px; line-height: 1.6; }
+.admin-teachers .at-edit-footer { display: flex; justify-content: flex-end; gap: 10px; margin-top: 20px; }
+.admin-teachers .at-save { background: #0067ff; color: white; }
+.admin-teachers .at-save:hover { background: #0055dc; }
+@media(max-width:480px) { .admin-teachers .at-edit-fields { grid-template-columns: 1fr; } }

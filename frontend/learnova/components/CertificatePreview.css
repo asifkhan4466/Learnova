@@ -1,0 +1,10 @@
+.certificate-preview-dialog { width: min(1100px, calc(100% - 24px)); max-height: calc(100dvh - 24px); overflow: auto; box-sizing: border-box; padding: 20px; border: 1px solid var(--learnova-border); border-radius: 10px; background: var(--learnova-surface); color: var(--learnova-text); }
+.certificate-preview-dialog::backdrop { background: color-mix(in srgb, var(--learnova-navy) 45%, transparent); }
+.certificate-preview-toolbar { display: flex; gap: 15px; justify-content: space-between; align-items: center; margin-bottom: 16px; }
+.certificate-preview-toolbar h2 { margin: 0; font-size: 20px; color: var(--learnova-navy); }
+.certificate-preview-dialog button { border: 1px solid var(--learnova-border); border-radius: 6px; padding: 10px 14px; background: var(--learnova-surface); color: var(--learnova-primary); cursor: pointer; }
+.certificate-preview-dialog .certificate-preview-download { background: var(--learnova-primary); color: var(--learnova-white); }
+.certificate-document, .certificate-template-full { display: block; width: 100%; height: auto; object-fit: contain; }
+.certificate-preview-caption { font-size: 12px; overflow-wrap: anywhere; color: var(--learnova-muted); }
+.certificate-preview-dialog button:disabled { opacity: .6; cursor: not-allowed; }
+.certificate-preview-dialog button:focus-visible { outline: 2px solid var(--learnova-primary); outline-offset: 2px; }

@@ -1,0 +1,135 @@
+﻿@import "./AccountTables.css";
+.admin-subadmins.admin-subadmins .as-stats { grid-template-columns: repeat(4,minmax(0,1fr)); }
+.admin-subadmins .asa-panel { padding: 15px; border: 1px solid var(--as-border); border-radius: 10px; background: white; }
+.admin-subadmins table { min-width: 850px; }
+.admin-subadmins td { padding: 20px 12px; border-right: 1px solid #eef4ff; }
+.admin-subadmins .asa-tags { display: flex; gap: 5px; flex-wrap: wrap; max-width: 200px; }
+.admin-subadmins .asa-tags span { padding: 5px 7px; color: #0065ff; background: #eaf4ff; border-radius: 5px; font-size: 11px; }
+.admin-subadmins .asa-tags span:nth-child(3n+2) { color: #7038ec; background: #f1ebff; }
+.admin-subadmins .asa-tags span:nth-child(3n) { color: #9a6500; background: #fff4d8; }
+.admin-subadmins .asa-switch { appearance: none; width: 39px; height: 22px; min-width: 39px; position: relative; border: 0; border-radius: 20px; background: #aeb7c9; cursor: pointer; margin: 0; }
+.admin-subadmins .asa-switch:before { content: ""; position: absolute; width: 16px; height: 16px; left: 3px; top: 3px; border-radius: 50%; background: white; box-shadow: 0 1px 3px #34415a20; }
+.admin-subadmins .asa-switch:checked { background: #006aff; }
+.admin-subadmins .asa-switch:checked:before { transform: translateX(17px); }
+.admin-subadmins .asa-switch:focus-visible { outline: 2px solid #77b7ff; outline-offset: 3px; }
+.admin-subadmins .asa-drawer { position: fixed; inset: 75px 0 0 auto; margin: 0; height: calc(100dvh - 75px); max-height: none; width: 440px; max-width: 100vw; box-sizing: border-box; padding: 20px; outline: none; overflow-y: auto; border: 1px solid var(--as-border); border-radius: 10px 0 0 10px; color: var(--as-ink); background: white; }
+.admin-subadmins .asa-drawer::backdrop { background: #07114d15; }
+.admin-subadmins .asa-drawer-heading { display: flex; justify-content: space-between; align-items: center; }
+.admin-subadmins .asa-drawer-heading h2 { font-size: 20px; margin: 0; }
+.admin-subadmins .asa-drawer-heading button { border: 0; font-size: 24px; padding: 0 8px; }
+.admin-subadmins .asa-person { display: flex; align-items: center; gap: 12px; padding: 25px 0; }
+.admin-subadmins .asa-person .as-avatar { width: 58px; height: 58px; font-size: 20px; }
+.admin-subadmins .asa-person h3 { font-size: 17px; margin: 0 0 7px; }
+.admin-subadmins .asa-person p { color: var(--as-muted); font-size: 12px; margin: 0 0 5px; overflow-wrap: anywhere; }
+.admin-subadmins .asa-person small { color: var(--as-muted); }
+.admin-subadmins .asa-person .as-badge { margin-left: auto; }
+.admin-subadmins .asa-tabs { display: flex; gap: 12px; border-bottom: 1px solid var(--as-border); }
+.admin-subadmins .asa-tabs button { flex: 1; border: 0; border-radius: 0; padding: 12px 0; color: var(--as-muted); }
+.admin-subadmins .asa-tabs [aria-selected=true] { border-bottom: 3px solid #006aff; color: #006aff; }
+.admin-subadmins .asa-tab-content { padding-top: 10px; min-height: 260px; }
+.admin-subadmins .asa-tab-content h3 { font-size: 17px; margin-bottom: 6px; }
+.admin-subadmins .asa-tab-content p { font-size: 12px; color: var(--as-muted); line-height: 1.6; }
+.admin-subadmins .asa-module-list { border: 1px solid var(--as-border); border-radius: 9px; }
+.admin-subadmins .asa-module-list label { display: flex; align-items: center; gap: 12px; padding: 12px 10px; border-bottom: 1px solid var(--as-border); }
+.admin-subadmins .asa-module-list label:last-child { border: 0; }
+.admin-subadmins .asa-module-icon { width: 34px; height: 38px; flex-shrink: 0; display: grid; place-items: center; border-radius: 7px; color: var(--as-accent); background: color-mix(in srgb,var(--as-accent) 12%,white); }
+.admin-subadmins .asa-module-icon svg { width: 21px; height: 21px; }
+.admin-subadmins .asa-module-list strong { display: block; font-size: 12px; }
+.admin-subadmins .asa-module-list small { display: block; margin-top: 4px; color: var(--as-muted); font-size: 11px; }
+.admin-subadmins .asa-module-list .asa-switch { margin-left: auto; }
+.admin-subadmins .asa-drawer-footer { position: sticky; bottom: -20px; display: flex; justify-content: flex-end; gap: 12px; padding: 18px 0; margin-top: 20px; background: white; }
+.admin-subadmins .asa-save { background: #006aff; color: white; border-color: #006aff; }
+.admin-subadmins .asa-tab-content dt { color: var(--as-muted); font-size: 12px; margin-top: 15px; }
+.admin-subadmins .asa-tab-content dd { margin: 5px 0; }
+@media(min-width:1650px) { .admin-subadmins.asa-editing { padding-right: 430px; } .admin-subadmins.asa-editing .as-banner-art { display: none; } }
+@media(max-width:1200px) { .admin-subadmins.admin-subadmins .as-stats { grid-template-columns: repeat(2,minmax(0,1fr)); } }
+@media(max-width:480px) { .admin-subadmins.admin-subadmins .as-stats { grid-template-columns: minmax(0,1fr); } .admin-subadmins .asa-drawer { width: 100%; inset: 0 0 0 auto; height: 100dvh; } .admin-subadmins .asa-person { flex-wrap: wrap; } }
+
+.admin-subadmins .asa-create-toolbar { display:flex; justify-content:space-between; align-items:center; gap:16px; margin-bottom:18px; flex-wrap:wrap; }
+.admin-subadmins .asa-create-toolbar h2 { margin:0; font-size:18px; }
+.admin-subadmins .asa-account-fields { border:0; padding:0; margin:20px 0; display:grid; gap:16px; min-width:0; }
+.admin-subadmins .asa-account-fields > label { display:grid; gap:7px; font-size:14px; font-weight:600; }
+.admin-subadmins .asa-account-fields input:not([type=checkbox]) { width:100%; box-sizing:border-box; padding:11px 12px; border:1px solid var(--as-border); border-radius:7px; font:inherit; color:inherit; }
+.admin-subadmins .asa-account-fields small { color:var(--as-muted); font-size:12px; font-weight:400; }
+.admin-subadmins .asa-account-fields .asa-checkbox { display:flex; align-items:center; gap:8px; font-size:13px; }
+.admin-subadmins .asa-create-modules { display:grid; gap:12px; }
+.admin-subadmins .asa-account-fields h3 { margin:8px 0 0; }
+.admin-subadmins .asa-error { color:#b42318; }
+.admin-subadmins .asa-create-dialog > form > p { font-size:13px; line-height:1.6; color:var(--as-muted); }
+
+/* Sub Admin page only: reference table and permission drawer. */
+.admin-subadmins { --asa-drawer-width: 450px; }
+.admin-subadmins .as-banner { min-height: 106px; box-sizing: border-box; padding: 20px; }
+.admin-subadmins .as-banner h1 { font-size: 30px; letter-spacing: -1px; }
+.admin-subadmins .as-banner-art { gap: 10px; max-width: 235px; font-size: 11px; }
+.admin-subadmins .as-banner-art > svg { width: 58px; }
+.admin-subadmins .as-stats { gap: 12px; }
+.admin-subadmins .as-stats article { min-height: 96px; box-sizing: border-box; padding: 14px; }
+.admin-subadmins .as-stat-icon { width: 52px; height: 54px; background: linear-gradient(140deg, color-mix(in srgb,var(--as-accent) 15%,white),color-mix(in srgb,var(--as-accent) 5%,white)); }
+.admin-subadmins .as-stats strong { font-size: 25px; }
+.admin-subadmins .as-stats small { font-size: 11px; }
+.admin-subadmins .asa-panel { padding: 12px 8px 8px; border-radius: 12px; }
+.admin-subadmins .as-tools { gap: 10px; flex-wrap: wrap; margin-bottom: 14px; }
+.admin-subadmins .as-tools .as-search { flex: 2 1 225px; }
+.admin-subadmins .as-tools select { flex: 1 1 115px; min-width: 115px; padding: 11px 8px; max-width: 170px; }
+.admin-subadmins .as-tools .asa-save { flex: 0 0 auto; padding: 12px 16px; white-space: nowrap; }
+.admin-subadmins .asa-save { background: #0067ff; color: #fff; border-color: #0067ff; box-shadow: 0 3px 8px #0067ff14; }
+.admin-subadmins .asa-save:hover { background: #0055dc; color: white; }
+.admin-subadmins .as-table-wrap { box-sizing: border-box; }
+.admin-subadmins table { min-width: 780px; }
+.admin-subadmins th { background: linear-gradient(120deg,#f8fbff,#f1f8ff); white-space: normal; line-height: 1.5; padding: 13px 11px; }
+.admin-subadmins td { height: 68px; box-sizing: border-box; padding: 12px 11px; line-height: 1.55; border-right: 1px solid #eef4ff; }
+.admin-subadmins th:first-child { width: 25%; }
+.admin-subadmins th:nth-child(3) { width: 20%; }
+.admin-subadmins th:nth-child(4) { width: 12%; }
+.admin-subadmins .as-avatar { width: 39px; height: 39px; background: linear-gradient(135deg,#e4efff,#f1f6ff); border: 1px solid #dbe8fc; }
+.admin-subadmins .as-student small { font-size: 10px; overflow-wrap: anywhere; }
+.admin-subadmins .asa-tags { gap: 5px; max-width: 190px; }
+.admin-subadmins .asa-tags span { padding: 3px 7px; line-height: 1.5; }
+.admin-subadmins .asa-more-modules { border: 0; padding: 3px 7px; background: #f0f4fb; color: #405e92; font-size: 11px; }
+.admin-subadmins .as-badge { padding: 5px 8px; }
+.admin-subadmins .as-pagination { padding: 22px 12px 16px; font-size: 12px; }
+.admin-subadmins .asa-drawer { width: var(--asa-drawer-width); inset: 75px 0 0 auto; height: calc(100dvh - 75px); padding: 22px 18px 0; border-radius: 14px 0 0 14px; box-shadow: -8px 0 35px #143d7010; }
+.admin-subadmins .asa-drawer::backdrop { background: #07114d08; }
+.admin-subadmins .asa-drawer-heading h2 { font-size: 20px; letter-spacing: -.5px; }
+.admin-subadmins .asa-drawer-heading button { color: #5677a9; background: transparent; }
+.admin-subadmins .asa-person { padding: 28px 0; gap: 14px; }
+.admin-subadmins .asa-person .as-avatar { width: 62px; height: 62px; }
+.admin-subadmins .asa-person h3 { font-size: 17px; }
+.admin-subadmins .asa-person > div { min-width: 0; }
+.admin-subadmins .asa-tabs { gap: 20px; margin-bottom: 10px; }
+.admin-subadmins .asa-tabs button { font-size: 13px; padding: 15px 0; }
+.admin-subadmins .asa-tab-content > p { margin: 6px 0 17px; }
+.admin-subadmins .asa-module-list { border: 0; }
+.admin-subadmins .asa-module-list label { border: 1px solid var(--as-border); border-top: 0; padding: 11px 10px; gap: 12px; min-height: 56px; box-sizing: border-box; }
+.admin-subadmins .asa-module-list label:first-child { border-top: 1px solid var(--as-border); border-radius: 9px 9px 0 0; }
+.admin-subadmins .asa-module-list strong { font-size: 12px; }
+.admin-subadmins .asa-module-list small { line-height: 1.45; font-size: 10px; margin-top: 3px; }
+.admin-subadmins .asa-module-icon { width: 37px; height: 38px; }
+.admin-subadmins .asa-module-list label.asa-public-access { margin-top: 16px; padding: 17px 0; border: 0; border-top: 1px solid var(--as-border); }
+.admin-subadmins .asa-drawer-footer { bottom: 0; margin-top: 20px; padding: 16px 0 20px; border-top: 1px solid #edf2fb; background: white; }
+.admin-subadmins .asa-drawer-footer button { min-width: 100px; padding: 12px 18px; }
+@media(min-width:1450px) {
+  .admin-subadmins.asa-editing { padding-right: 450px; }
+  .admin-subadmins.asa-editing .as-banner-art { display: flex; }
+  .admin-subadmins.asa-editing .as-banner { gap: 12px; }
+  .admin-subadmins.asa-editing .as-banner p { font-size: 12px; }
+  .admin-subadmins.asa-editing .as-stats article { gap: 9px; padding: 12px; }
+  .admin-subadmins.asa-editing .as-stat-icon { width: 42px; height: 48px; }
+}
+@media(max-width:1449px) { .admin-subadmins.asa-editing { padding-right: 0; } .admin-subadmins .asa-drawer::backdrop { background: #07114d35; } }
+@media(max-width:700px) { .admin-subadmins .as-tools .as-search { flex-basis: 100%; } .admin-subadmins .as-tools .asa-save { flex: 1; } .admin-subadmins .as-stats article { flex-direction: row; align-items: center; } }
+@media(max-width:480px) { .admin-subadmins .asa-drawer { width: 100%; inset: 0; height: 100dvh; border-radius: 0; } }
+.admin-subadmins .asa-row-actions { display: flex; align-items: center; gap: 6px; }
+.admin-subadmins .asa-row-actions > button { padding: 7px 9px; }
+.admin-subadmins .asa-row-actions > .as-view { padding: 0; flex-shrink: 0; }
+.admin-subadmins .asa-delete { color: #c9233f; border-color: #f4d9df; }
+.admin-subadmins .asa-delete:hover { background: #fff0f3; }
+.admin-subadmins .asa-password-field { display: grid; gap: 7px; font-size: 14px; font-weight: 600; }
+.admin-subadmins .asa-password-input { position: relative; }
+.admin-subadmins .asa-password-input input { padding-right: 48px; }
+.admin-subadmins .asa-password-eye { position: absolute; right: 4px; top: 50%; transform: translateY(-50%); display: grid; place-items: center; width: 38px; height: 36px; padding: 8px; border: 0; background: transparent; color: #6176a9; }
+.admin-subadmins .asa-password-eye:hover { background: #edf5ff; color: #0067ff; }
+.admin-subadmins .asa-password-eye svg { width: 20px; height: 20px; }
+.admin-subadmins .asa-profile-details dd { overflow-wrap: anywhere; line-height: 1.6; }
+.admin-subadmins .asa-profile-photo { width: 72px; height: 72px; object-fit: cover; border-radius: 50%; margin-top: 15px; }

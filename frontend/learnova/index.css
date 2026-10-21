@@ -1,0 +1,46 @@
+/* Colors sampled directly from public/Logo.png; tints mix these samples with neutral surfaces. */
+:root {
+  --learnova-navy: #011f55;
+  --learnova-blue: #006cf8;
+  --learnova-cyan: #04c9fc;
+  --learnova-purple: #7a16fa;
+  --learnova-gold: #fda700;
+  --learnova-primary: #0048a9;
+  --learnova-secondary: var(--learnova-blue);
+  --learnova-accent: var(--learnova-cyan);
+  --learnova-dark: var(--learnova-navy);
+  --learnova-white: #ffffff;
+  --learnova-surface: var(--learnova-white);
+  --learnova-text: #252525;
+  --learnova-ink: var(--learnova-navy);
+  --learnova-muted: #626262;
+  --learnova-bg: color-mix(in srgb, var(--learnova-blue) 3%, white);
+  --learnova-light: color-mix(in srgb, var(--learnova-blue) 5%, white);
+  --learnova-border: color-mix(in srgb, var(--learnova-navy) 15%, white);
+  --learnova-soft: color-mix(in srgb, var(--learnova-cyan) 8%, white);
+  --learnova-focus: color-mix(in srgb, var(--learnova-cyan) 35%, transparent);
+  --learnova-shadow: color-mix(in srgb, var(--learnova-navy) 7%, transparent);
+  --learnova-on-dark: color-mix(in srgb, var(--learnova-cyan) 10%, white);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--learnova-surface);
+  color: var(--learnova-text);
+}
+
+button,
+input,
+textarea,
+select {
+  font-family: inherit;
+}

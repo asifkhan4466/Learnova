@@ -1,0 +1,234 @@
+/* Styles owned by Profile.jsx. Shared class names use zero-specificity page scopes. */
+
+.teacher-profile {
+  width: 100%;
+}
+
+.teacher-profile-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+.teacher-profile-header h1 {
+  margin: 0 0 7px;
+  font-size: 28px;
+  color: var(--learnova-ink);
+}
+
+.teacher-profile-header p {
+  margin: 0;
+  color: var(--learnova-muted);
+  font-size: 14px;
+}
+
+.teacher-edit-profile-btn {
+  border: none;
+  background: var(--learnova-primary);
+  color: var(--learnova-surface);
+  padding: 10px 18px;
+  border-radius: 7px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.teacher-edit-profile-btn:hover {
+  background: var(--learnova-primary);
+}
+
+.teacher-profile-card {
+  background: var(--learnova-surface);
+  border: 1px solid var(--learnova-border);
+  border-radius: 12px;
+  padding: 25px;
+}
+
+.teacher-profile-top {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.teacher-profile-avatar {
+  width: 75px;
+  height: 75px;
+  min-width: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--learnova-primary);
+  color: var(--learnova-surface);
+  border-radius: 50%;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.teacher-profile-basic h2 {
+  margin: 0 0 6px;
+  font-size: 21px;
+  color: var(--learnova-ink);
+}
+
+.teacher-profile-basic p {
+  margin: 0 0 8px;
+  color: var(--learnova-muted);
+  font-size: 14px;
+}
+
+.teacher-profile-basic span {
+  display: inline-block;
+  padding: 5px 10px;
+  background: var(--learnova-light);
+  color: var(--learnova-ink);
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.teacher-profile-divider {
+  height: 1px;
+  background: var(--learnova-light);
+  margin: 25px 0;
+}
+
+.teacher-profile-section h3 {
+  margin: 0 0 18px;
+  font-size: 17px;
+  color: var(--learnova-ink);
+}
+
+.teacher-profile-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.teacher-profile-field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.teacher-profile-field label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--learnova-muted);
+}
+
+.teacher-profile-field p {
+  margin: 0;
+  min-height: 42px;
+  padding: 11px 12px;
+  background: var(--learnova-bg);
+  border: 1px solid var(--learnova-border);
+  border-radius: 7px;
+  color: var(--learnova-ink);
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+}
+
+.teacher-profile-field input,
+.teacher-profile-section textarea {
+  width: 100%;
+  padding: 11px 12px;
+  border: 1px solid var(--learnova-border);
+  border-radius: 7px;
+  background: var(--learnova-surface);
+  color: var(--learnova-ink);
+  font-size: 14px;
+  outline: none;
+}
+
+.teacher-profile-field input:focus,
+.teacher-profile-section textarea:focus {
+  border-color: var(--learnova-muted);
+}
+
+.teacher-profile-section textarea {
+  min-height: 110px;
+  resize: vertical;
+  line-height: 1.6;
+}
+
+.teacher-profile-bio {
+  margin: 0;
+  padding: 15px;
+  background: var(--learnova-bg);
+  border: 1px solid var(--learnova-border);
+  border-radius: 8px;
+  color: var(--learnova-muted);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+@media (max-width: 700px) {
+  .teacher-profile-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .teacher-profile-header h1 {
+    font-size: 24px;
+  }
+
+  .teacher-profile-card {
+    padding: 18px;
+  }
+
+  .teacher-profile-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .teacher-edit-profile-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .teacher-profile-top {
+    align-items: flex-start;
+  }
+
+  .teacher-profile-avatar {
+    width: 60px;
+    height: 60px;
+    min-width: 60px;
+    font-size: 22px;
+  }
+
+  .teacher-profile-basic h2 {
+    font-size: 18px;
+  }
+
+  .teacher-profile-card {
+    padding: 15px;
+  }
+}
+
+/* Learnova interaction polish; geometry is unchanged. */
+:where(.teacher-profile) :is(input, select, textarea):focus-visible { border-color: var(--learnova-primary); outline: 2px solid var(--learnova-focus); outline-offset: 2px; }
+:where(.teacher-profile) :is(button, a):focus-visible { outline: 2px solid var(--learnova-primary); outline-offset: 3px; }
+:where(.teacher-profile) :is(input, button, select, textarea):disabled { opacity: .65; cursor: not-allowed; }
+:where(.teacher-profile) input[type="checkbox"] { accent-color: var(--learnova-primary); }
+
+/* Reference profile layout, scoped to this page. */
+.teacher-profile .teacher-profile-card{background:transparent;border:0;padding:0;box-shadow:none}
+.teacher-profile .teacher-profile-top{background:var(--learnova-surface);border:1px solid var(--learnova-border);border-radius:10px;padding:28px;gap:28px;margin-bottom:18px}
+.teacher-profile .teacher-profile-avatar{width:120px;height:120px;min-width:120px;background:var(--learnova-light);color:var(--learnova-primary);font-size:40px}
+.teacher-profile .teacher-profile-basic h2{font-size:26px;margin-bottom:8px;color:var(--learnova-navy)}
+.teacher-profile .tp-contact{display:flex;flex-wrap:wrap;gap:15px;margin-top:18px}
+.teacher-profile .tp-contact span{display:flex;gap:8px;align-items:center;background:transparent;padding:0;color:var(--learnova-muted);font-size:12px}
+.teacher-profile .tp-contact svg{width:16px;height:16px;color:var(--learnova-primary)}
+.teacher-profile .tp-overview{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-bottom:18px}
+.teacher-profile .tp-overview article{display:flex;align-items:center;gap:20px;background:var(--learnova-surface);border:1px solid var(--learnova-border);border-radius:10px;padding:24px;min-width:0}
+.teacher-profile .tp-overview p{font-size:13px;color:var(--learnova-muted);margin:0 0 8px}.teacher-profile .tp-overview strong{font-size:20px;color:var(--learnova-navy)}
+.teacher-profile .tp-icon{display:flex;align-items:center;justify-content:center;width:58px;height:58px;flex-shrink:0;border-radius:12px;background:var(--learnova-light);color:var(--learnova-primary)}.teacher-profile .tp-icon svg{width:29px;height:29px}
+.teacher-profile .tp-overview article:nth-child(3) .tp-icon{color:var(--learnova-purple)}
+.teacher-profile .teacher-profile-section{background:var(--learnova-surface);border:1px solid var(--learnova-border);padding:24px;border-radius:10px;margin-bottom:18px}.teacher-profile .tp-edit-only{display:none}.teacher-profile .teacher-profile-divider{display:none}
+.teacher-profile .tp-overview input{display:block;width:100%;box-sizing:border-box;margin-top:10px;padding:10px;border:1px solid var(--learnova-border);border-radius:6px}
+@media(max-width:600px){.teacher-profile .tp-overview{grid-template-columns:1fr}.teacher-profile .teacher-profile-top{padding:20px;gap:16px;flex-wrap:wrap}.teacher-profile .teacher-profile-avatar{width:85px;height:85px;min-width:85px}.teacher-profile .teacher-profile-basic h2{font-size:22px}.teacher-profile .tp-contact{overflow-wrap:anywhere}}

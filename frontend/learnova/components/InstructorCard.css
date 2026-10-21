@@ -1,0 +1,19 @@
+.public-instructor-card { min-width: 0; display: flex; flex-direction: column; overflow: hidden; border: 1px solid var(--learnova-border); border-radius: 8px; background: var(--learnova-surface); box-shadow: 0 2px 8px var(--learnova-shadow); transition: transform .18s ease, border-color .18s ease; }
+.public-instructor-card:hover { transform: translateY(-3px); border-color: var(--learnova-primary); }
+.public-instructor-portrait { height: 190px; background: var(--learnova-light); display: grid; place-items: center; overflow: hidden; }
+.public-instructor-portrait img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center 30%; }
+.public-instructor-initials { display: grid; place-items: center; width: 100px; height: 100px; border-radius: 50%; background: var(--learnova-surface); border: 1px solid var(--learnova-border); color: var(--learnova-primary); font-size: 32px; font-weight: 600; }
+.public-instructor-body { padding: 18px; display: flex; flex-direction: column; flex: 1; }
+.public-instructor-card h3 { margin: 0 0 6px; color: var(--learnova-navy); font-size: 17px; line-height: 1.4; overflow-wrap: anywhere; }
+.public-instructor-skill { color: var(--learnova-primary); font-size: 12px; line-height: 1.5; }
+.public-instructor-card p { margin: 10px 0 12px; font-size: 12px; color: var(--learnova-muted); }
+.public-instructor-meta { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; margin-bottom: 16px; font-size: 12px; color: var(--learnova-muted); }
+.public-instructor-meta span:first-child { display: flex; align-items: center; gap: 5px; color: var(--learnova-navy); }
+.public-instructor-meta .public-icon { width: 13px; height: 13px; fill: var(--learnova-primary); color: var(--learnova-primary); }
+.public-instructor-card button { display: flex; justify-content: center; align-items: center; gap: 8px; width: 100%; margin-top: auto; padding: 10px; border: 1px solid var(--learnova-border); border-radius: 5px; color: var(--learnova-primary); background: var(--learnova-surface); font-size: 12px; font-weight: 600; cursor: pointer; }
+.public-instructor-card button .public-icon { width: 14px; height: 14px; }
+.public-instructor-card button:hover { background: var(--learnova-light); border-color: var(--learnova-primary); }
+.public-instructor-card button:focus-visible { outline: 2px solid var(--learnova-primary); outline-offset: 3px; }
+@media (prefers-reduced-motion: reduce) 
+{ .public-instructor-card { transition: none; } 
+.public-instructor-card:hover { transform: none; } }

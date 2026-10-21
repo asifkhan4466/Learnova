@@ -1,0 +1,214 @@
+/* Styles owned by LiveClasses.jsx. Shared class names use zero-specificity page scopes. */
+
+.live-classes-page {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.live-classes-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.live-classes-header h1 {
+  margin: 0 0 7px;
+  font-size: 30px;
+}
+
+.live-classes-header p {
+  margin: 0;
+  color: var(--learnova-muted);
+}
+
+.live-count {
+  background: var(--learnova-primary);
+  color: var(--learnova-surface);
+  padding: 10px 16px;
+  border-radius: 7px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.live-classes-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.live-class-item {
+  background: var(--learnova-surface);
+  border-radius: 14px;
+  padding: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+  box-shadow: 0 5px 20px var(--learnova-shadow);
+}
+
+.live-class-main {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+}
+
+.live-class-icon {
+  width: 55px;
+  height: 55px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  background: var(--learnova-primary);
+  color: var(--learnova-surface);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.live-class-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.live-class-title h2 {
+  margin: 0;
+  font-size: 19px;
+}
+
+.live-class-title span {
+  background: var(--learnova-light);
+  padding: 5px 9px;
+  border-radius: 5px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.live-course-name {
+  margin: 7px 0 15px;
+  color: var(--learnova-muted);
+}
+
+.live-class-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 20px;
+  color: var(--learnova-muted);
+  font-size: 13px;
+}
+
+.live-class-action {
+  min-width: 180px;
+  text-align: right;
+}
+
+.live-countdown {
+  color: var(--learnova-muted);
+  font-size: 12px;
+  margin-bottom: 12px;
+}
+
+.live-countdown strong {
+  display: block;
+  color: var(--learnova-ink);
+  font-size: 17px;
+  margin-top: 4px;
+}
+
+.join-class-btn {
+  width: 100%;
+  border: none;
+  padding: 11px 16px;
+  border-radius: 7px;
+  background: var(--learnova-primary);
+  color: var(--learnova-surface);
+  font-weight: 600;
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.live-class-note {
+  margin-top: 25px;
+  padding: 18px 20px;
+  background: var(--learnova-surface);
+  border-radius: 10px;
+  color: var(--learnova-muted);
+  font-size: 14px;
+}
+
+@media (max-width: 800px) {
+  .live-class-item {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .live-class-action {
+    width: 100%;
+    text-align: left;
+  }
+
+  .join-class-btn {
+    max-width: 220px;
+  }
+}
+
+@media (max-width: 600px) {
+  .live-classes-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .live-class-item {
+    padding: 20px;
+  }
+
+  .live-class-main {
+    gap: 12px;
+  }
+
+  .live-class-icon {
+    width: 45px;
+    height: 45px;
+  }
+
+  .live-class-title {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 7px;
+  }
+
+  .live-class-title h2 {
+    font-size: 17px;
+  }
+
+  .join-class-btn {
+    max-width: none;
+  }
+}
+
+/* Learnova interaction polish; geometry is unchanged. */
+:where(.live-classes-page) :is(input, select, textarea):focus-visible { border-color: var(--learnova-primary); outline: 2px solid var(--learnova-focus); outline-offset: 2px; }
+:where(.live-classes-page) :is(button, a):focus-visible { outline: 2px solid var(--learnova-primary); outline-offset: 3px; }
+:where(.live-classes-page) :is(input, button, select, textarea):disabled { opacity: .65; cursor: not-allowed; }
+:where(.live-classes-page) input[type="checkbox"] { accent-color: var(--learnova-primary); }
+
+.student-batch-history { margin-top: 24px; padding: 20px; border: 1px solid var(--learnova-border); border-radius: 8px; background: var(--learnova-surface); }
+.student-batch-history h2 { color: var(--learnova-navy); font-size: 18px; }
+.student-batch-history p { color: var(--learnova-muted); line-height: 1.6; }
+.student-batch-history details { padding: 12px 0; border-bottom: 1px solid var(--learnova-border); }
+.student-batch-history summary { cursor: pointer; color: var(--learnova-primary); }
+
+@media (max-width: 900px) {
+  .live-classes-page, .live-class-main, .live-class-main > div { min-width: 0; }
+  .live-classes-page { overflow-wrap: anywhere; }
+  .live-class-item { flex-wrap: wrap; }
+  .live-class-action { min-width: 0; max-width: 100%; }
+  .live-class-title { flex-wrap: wrap; }
+}
+@media (max-width: 600px) {
+  .live-class-item { padding: 16px; }
+  .live-class-main { width: 100%; }
+  .join-class-btn { min-height: 44px; }
+}

@@ -1,0 +1,83 @@
+.admin-teacher-directory { font-family: Arial,sans-serif; color: #07164c; }
+.admin-teacher-directory * { box-sizing: border-box; }
+.admin-teacher-directory svg { width: 19px; height: 19px; flex-shrink: 0; }
+.admin-teacher-directory button,.admin-teacher-directory select,.admin-teacher-directory input,.admin-teacher-directory textarea { font: inherit; font-size: 12px; color: inherit; border: 1px solid #dce9ff; border-radius: 6px; background: #fff; padding: 10px 12px; }
+.admin-teacher-directory button { cursor: pointer; background: linear-gradient(#fbfdff,#f0f6ff); }
+.admin-teacher-directory button:hover { background: #e9f2ff; }
+.admin-teacher-directory button:disabled { opacity: .4; cursor: not-allowed; }
+.admin-teacher-directory :is(button,input,select,textarea):focus-visible { outline: 2px solid #0067ff; outline-offset: 2px; }
+.admin-teacher-directory .atd-primary,.admin-teacher-directory .at-save { background: #0062ff; border-color: #0062ff; color: white; }
+.admin-teacher-directory .atd-heading { display: flex; justify-content: space-between; gap: 20px; align-items: flex-end; margin-bottom: 18px; }
+.admin-teacher-directory h1 { font-size: 32px; margin: 0 0 8px; letter-spacing: -.8px; }
+.admin-teacher-directory .atd-heading p { margin: 0; color: #536ca0; font-size: 14px; }
+.admin-teacher-directory .atd-heading-right { display: grid; justify-items: end; gap: 12px; flex-shrink: 0; }
+.admin-teacher-directory .atd-heading-right nav { display: flex; gap: 10px; font-size: 11px; color: #627ab0; }
+.admin-teacher-directory a { color: #0067ff; text-decoration: none; }
+.admin-teacher-directory .atd-heading button { padding: 11px 22px; font-size: 14px; }
+.admin-teacher-directory .atd-heading button span { font-size: 20px; margin-right: 6px; }
+.admin-teacher-directory .atd-stats { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 10px; margin-bottom: 15px; }
+.admin-teacher-directory .atd-stats article { display: flex; align-items: center; gap: 18px; padding: 15px; background: white; border: 1px solid #dfeaff; border-radius: 9px; min-height: 112px; }
+.admin-teacher-directory .atd-stat-icon { display: grid; place-items: center; width: 72px; height: 76px; border-radius: 13px; flex-shrink: 0; }
+.admin-teacher-directory .atd-stat-icon svg { width: 41px; height: 41px; stroke-width: 2.4; }
+.admin-teacher-directory .atd-blue { background: #e0edff; color: #0067ff; }
+.admin-teacher-directory .atd-green { background: #d9fae9; color: #00a963; }
+.admin-teacher-directory .atd-pink { background: #ffe4ec; color: #fb255b; }
+.admin-teacher-directory .atd-orange { background: #fff0d9; color: #ff8c00; }
+.admin-teacher-directory .atd-stats strong { font-size: 26px; }
+.admin-teacher-directory .atd-stats p { margin: 6px 0 11px; color: #425c94; font-size: 13px; }
+.admin-teacher-directory .atd-stats small { color: #6680a5; font-size: 10px; }
+.admin-teacher-directory .atd-filters { display: grid; grid-template-columns: 1.2fr 1fr 1fr 1fr auto; align-items: end; gap: 16px; padding: 15px 18px; border: 1px solid #dfeaff; border-radius: 9px; background: #fff; margin-bottom: 14px; }
+.admin-teacher-directory .atd-filters label { display: grid; gap: 9px; min-width: 0; font-size: 13px; font-weight: 600; }
+.admin-teacher-directory .atd-filters select { width: 100%; min-width: 0; color: #425c94; font-weight: 400; }
+.admin-teacher-directory .atd-search { display: flex; align-items: center; border: 1px solid #dce9ff; border-radius: 6px; padding-left: 11px; color: #6781b1; }
+.admin-teacher-directory .atd-search input { border: 0; width: 100%; min-width: 0; font-weight: 400; }
+.admin-teacher-directory .atd-filters>button { min-width: 105px; color: #0067ff; }
+.admin-teacher-directory .atd-panel { background: white; border: 1px solid #dfeaff; border-radius: 9px; overflow: hidden; }
+.admin-teacher-directory .atd-table-wrap { overflow-x: auto; }
+.admin-teacher-directory table { width: 100%; min-width: 1000px; border-collapse: collapse; text-align: left; font-size: 12px; }
+.admin-teacher-directory th { background: linear-gradient(120deg,#f5faff,#edf5ff); padding: 13px 12px; font-size: 11px; white-space: nowrap; }
+.admin-teacher-directory td { padding: 6px 12px; border-top: 1px solid #e8effb; color: #4c6095; height: 46px; }
+.admin-teacher-directory tbody tr:hover { background: #f9fbff; }
+.admin-teacher-directory .atd-person { display: flex; align-items: center; gap: 13px; white-space: nowrap; color: #243e78; }
+.admin-teacher-directory .atd-avatar { width: 34px; height: 34px; border-radius: 50%; display: grid; place-items: center; flex-shrink: 0; overflow: hidden; background: #e4eeff; color: #3261a2; font-size: 11px; font-weight: 600; }
+.admin-teacher-directory .atd-avatar img { width: 100%; height: 100%; object-fit: cover; }
+.admin-teacher-directory .atd-status { display: inline-block; border-radius: 20px; padding: 6px 15px; background: #def9eb; color: #009a5c; font-size: 11px; }
+.admin-teacher-directory .atd-status[data-status=Inactive] { background: #ffe1e9; color: #f52654; }
+.admin-teacher-directory .atd-actions { display: flex; gap: 7px; }
+.admin-teacher-directory .atd-actions button { width: 32px; height: 31px; display: grid; place-items: center; padding: 6px; border: 0; background: #edf4ff; color: #0067ff; }
+.admin-teacher-directory .atd-actions .atd-delete { background: #fff0f3; color: #f52250; }
+.admin-teacher-directory .atd-pagination { display: flex; justify-content: space-between; align-items: center; gap: 14px; padding: 12px 17px; border-top: 1px solid #e8effb; color: #526b9f; font-size: 12px; }
+.admin-teacher-directory .atd-pagination nav { display: flex; gap: 6px; }
+.admin-teacher-directory .atd-pagination button { padding: 8px; min-width: 32px; }
+.admin-teacher-directory [aria-current=page] { color: white; background: #0067ff; border-color: #0067ff; }
+.admin-teacher-directory .atd-bottom { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 14px; }
+.admin-teacher-directory .atd-bottom header { display: flex; justify-content: space-between; align-items: center; padding: 13px 16px 8px; }
+.admin-teacher-directory .atd-bottom h2 { display: flex; align-items: center; gap: 10px; margin: 0; font-size: 13px; }
+.admin-teacher-directory .atd-bottom h2 svg { color: #0067ff; }
+.admin-teacher-directory .atd-bottom a { font-size: 11px; }
+.admin-teacher-directory .atd-top-teachers { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 7px; padding: 5px 10px 14px; }
+.admin-teacher-directory .atd-top-teachers button { display: flex; text-align: left; gap: 10px; background: white; padding: 10px 7px; }
+.admin-teacher-directory .atd-top-teachers strong { font-size: 10px; font-weight: 400; }
+.admin-teacher-directory .atd-top-teachers b { display: block; color: #f99a00; margin: 6px 0; font-size: 12px; }
+.admin-teacher-directory .atd-top-teachers small { font-size: 10px; color: #526b9f; }
+.admin-teacher-directory .atd-activity { padding: 0 16px 10px; }
+.admin-teacher-directory .atd-activity>div { display: flex; align-items: center; gap: 12px; padding: 6px 0; border-bottom: 1px solid #edf2fb; font-size: 11px; }
+.admin-teacher-directory .atd-activity>div>span { display: grid; place-items: center; color: #0067ff; background: #edf4ff; padding: 6px; border-radius: 6px; }
+.admin-teacher-directory .atd-activity p { margin: 0; flex: 1; }
+.admin-teacher-directory .atd-activity small { display: block; color: #687fad; margin-top: 3px; }
+.admin-teacher-directory .atd-empty { text-align: center; padding: 30px; }
+.admin-teacher-directory .atd-message { font-size: 13px; }
+.admin-teacher-directory .atd-dialog { width: min(600px,calc(100vw - 32px)); max-height: 85dvh; padding: 24px; border: 1px solid #dce9ff; border-radius: 12px; color: #07164c; }
+.admin-teacher-directory .atd-dialog::backdrop { background: #07164c55; }
+.admin-teacher-directory .atd-dialog h2 { margin-top: 0; }
+.admin-teacher-directory .at-edit-fields,.admin-teacher-directory .atd-dialog dl { border: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+.admin-teacher-directory .at-edit-fields label { display: grid; gap: 7px; font-size: 13px; }
+.admin-teacher-directory .at-edit-fields input { min-width: 0; width: 100%; }
+.admin-teacher-directory .at-photo-preview { width: 60px; height: 60px; border-radius: 50%; object-fit: cover; }
+.admin-teacher-directory .at-edit-note { font-size: 12px; line-height: 1.6; color: #6880ab; }
+.admin-teacher-directory .at-edit-error { color: #ce2349; }
+.admin-teacher-directory .at-edit-footer { display: flex; justify-content: flex-end; gap: 10px; }
+.admin-teacher-directory dt { font-size: 12px; color: #6880ab; }
+.admin-teacher-directory dd { margin: 5px 0; overflow-wrap: anywhere; }
+@media(max-width:1250px) { .admin-teacher-directory .atd-stats { grid-template-columns: repeat(2,minmax(0,1fr)); } .admin-teacher-directory .atd-filters { grid-template-columns: 1fr 1fr; } .admin-teacher-directory .atd-bottom { grid-template-columns: 1fr; } }
+@media(max-width:600px) { .admin-teacher-directory .atd-heading { flex-direction: column; align-items: stretch; } .admin-teacher-directory .atd-heading-right { justify-items: start; } .admin-teacher-directory .atd-stats,.admin-teacher-directory .atd-filters,.admin-teacher-directory .atd-top-teachers,.admin-teacher-directory .at-edit-fields,.admin-teacher-directory .atd-dialog dl { grid-template-columns: 1fr; } .admin-teacher-directory .atd-pagination { flex-wrap: wrap; } }

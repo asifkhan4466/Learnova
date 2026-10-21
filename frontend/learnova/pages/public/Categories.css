@@ -1,0 +1,155 @@
+/* Styles owned by Categories.jsx. Shared class names use zero-specificity page scopes. */
+
+:where(.categories-page) .categories-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+:where(.categories-page) .category-card {
+  padding: 30px 25px;
+  text-align: center;
+  border: 1px solid var(--learnova-border);
+  border-radius: 12px;
+  background: var(--learnova-surface);
+  transition: transform 0.3s ease;
+}
+
+:where(.categories-page) .category-card:hover {
+  transform: translateY(-5px);
+}
+
+:where(.categories-page) .category-icon {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+:where(.categories-page) .category-card h3 {
+  margin: 10px 0;
+  font-size: 20px;
+}
+
+:where(.categories-page) .category-card p {
+  color: var(--learnova-muted);
+  line-height: 1.6;
+}
+
+.categories-page {
+  background: var(--learnova-surface);
+  min-height: 100vh;
+}
+
+.categories-header {
+  text-align: center;
+  padding: 90px 20px 60px;
+  background: var(--learnova-bg);
+}
+
+.categories-header span {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.categories-header h1 {
+  font-size: 44px;
+  margin: 15px 0;
+}
+
+.categories-header p {
+  max-width: 650px;
+  margin: auto;
+  color: var(--learnova-muted);
+  line-height: 1.7;
+}
+
+.all-categories {
+  max-width: 1200px;
+  margin: auto;
+  padding: 70px 40px;
+}
+
+.all-categories .categories-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.all-categories .category-card {
+  padding: 30px;
+  border: 1px solid var(--learnova-border);
+  border-radius: 14px;
+  text-align: center;
+  transition: 0.3s ease;
+}
+
+.all-categories .category-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px var(--learnova-shadow);
+}
+
+.all-categories .category-icon {
+  font-size: 42px;
+  margin-bottom: 18px;
+}
+
+.all-categories .category-card h2 {
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+
+.all-categories .category-card p {
+  color: var(--learnova-muted);
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+.category-courses {
+  display: block;
+  margin: 18px 0;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.category-btn {
+  display: inline-block;
+  padding: 11px 18px;
+  border-radius: 7px;
+  background: var(--learnova-primary);
+  color: var(--learnova-surface);
+  text-decoration: none;
+  font-size: 14px;
+}
+
+@media (max-width: 900px) {
+  .all-categories .categories-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .categories-header h1 {
+    font-size: 38px;
+  }
+}
+
+@media (max-width: 600px) {
+  .categories-header {
+    padding: 60px 20px 45px;
+  }
+
+  .categories-header h1 {
+    font-size: 30px;
+  }
+
+  .categories-header p {
+    font-size: 14px;
+  }
+
+  .all-categories {
+    padding: 50px 20px;
+  }
+
+  .all-categories .categories-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+:where(.categories-page) a { color: var(--learnova-primary); }

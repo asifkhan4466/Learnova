@@ -1,0 +1,181 @@
+/* Styles owned by MyCourses.jsx. Shared class names use zero-specificity page scopes. */
+
+:where(.my-courses-page) .progress-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+:where(.my-courses-page) .progress-bar {
+  height: 8px;
+  background: var(--learnova-light);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+:where(.my-courses-page) .progress-fill {
+  height: 100%;
+  background: var(--learnova-primary);
+  border-radius: 10px;
+}
+
+.my-courses-page {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.my-courses-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.my-courses-header h1 {
+  margin: 0 0 7px;
+  font-size: 30px;
+}
+
+.my-courses-header p {
+  margin: 0;
+  color: var(--learnova-muted);
+}
+
+.course-count {
+  background: var(--learnova-primary);
+  color: var(--learnova-surface);
+  padding: 10px 16px;
+  border-radius: 7px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.my-courses-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+.my-course-card {
+  background: var(--learnova-surface);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px var(--learnova-shadow);
+}
+
+.my-course-image {
+  height: 170px;
+  background: var(--learnova-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--learnova-surface);
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.my-course-content {
+  padding: 24px;
+}
+
+.my-course-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.my-course-top span {
+  background: var(--learnova-light);
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.my-course-top small {
+  color: var(--learnova-muted);
+}
+
+.my-course-content h2 {
+  margin: 15px 0 7px;
+  font-size: 21px;
+}
+
+.my-course-teacher {
+  margin: 0;
+  color: var(--learnova-muted);
+  font-size: 14px;
+}
+
+.my-course-details {
+  display: flex;
+  gap: 20px;
+  margin: 20px 0;
+  color: var(--learnova-muted);
+  font-size: 13px;
+}
+
+.my-course-progress {
+  margin-bottom: 20px;
+}
+
+.continue-course-btn {
+  width: 100%;
+  border: none;
+  padding: 12px;
+  background: var(--learnova-primary);
+  color: var(--learnova-surface);
+  border-radius: 7px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.continue-course-btn:hover {
+  background: var(--learnova-primary);
+}
+
+@media (max-width: 700px) {
+  .my-courses-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .my-courses-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+:where(.my-courses-page) .progress-bar {
+  width: 100%;
+  height: 9px;
+  background: var(--learnova-light);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+/* The existing brand container keeps its text-sized footprint. */
+.my-course-image > div {
+  position: relative;
+  width: 4.447em;
+  height: 1lh;
+}
+
+.my-course-image > div > img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 120px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Learnova interaction polish; geometry is unchanged. */
+:where(.my-courses-page) :is(input, select, textarea):focus-visible { border-color: var(--learnova-primary); outline: 2px solid var(--learnova-focus); outline-offset: 2px; }
+:where(.my-courses-page) :is(button, a):focus-visible { outline: 2px solid var(--learnova-primary); outline-offset: 3px; }
+:where(.my-courses-page) :is(input, button, select, textarea):disabled { opacity: .65; cursor: not-allowed; }
+:where(.my-courses-page) input[type="checkbox"] { accent-color: var(--learnova-primary); }
+
+a.continue-course-btn { display: block; box-sizing: border-box; text-align: center; text-decoration: none; }

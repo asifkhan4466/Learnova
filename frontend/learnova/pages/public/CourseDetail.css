@@ -1,0 +1,236 @@
+/* Styles owned by CourseDetail.jsx. Shared class names use zero-specificity page scopes. */
+
+:where(.course-detail-page) .course-category {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+:where(.course-detail-page) .discount-price {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+:where(.course-detail-page) .original-price {
+  text-decoration: line-through;
+  color: var(--learnova-muted);
+}
+
+.course-detail-page {
+  background: var(--learnova-surface);
+}
+
+.course-detail-header {
+  background: var(--learnova-bg);
+  padding: 70px 40px;
+}
+
+.course-detail-header-content {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.course-detail-header h1 {
+  font-size: 46px;
+  margin: 15px 0;
+}
+
+.course-detail-header p {
+  max-width: 700px;
+  color: var(--learnova-muted);
+  line-height: 1.7;
+}
+
+.course-detail-meta {
+  display: flex;
+  gap: 25px;
+  margin-top: 25px;
+  flex-wrap: wrap;
+}
+
+.course-detail-content {
+  max-width: 1200px;
+  margin: auto;
+  padding: 70px 40px;
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  gap: 50px;
+}
+
+.course-detail-image {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  border-radius: 14px;
+}
+
+.course-section {
+  margin-top: 40px;
+}
+
+.course-section h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.course-section p {
+  color: var(--learnova-muted);
+  line-height: 1.7;
+}
+
+.learning-list p {
+  margin: 12px 0;
+  color: var(--learnova-ink);
+}
+
+.curriculum-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  margin-bottom: 12px;
+  border: 1px solid var(--learnova-border);
+  border-radius: 10px;
+}
+
+.curriculum-item h3 {
+  margin: 0 0 7px;
+  font-size: 16px;
+}
+
+.curriculum-item p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.curriculum-item span {
+  font-size: 25px;
+}
+
+.enrollment-card {
+  height: fit-content;
+  padding: 30px;
+  border: 1px solid var(--learnova-border);
+  border-radius: 14px;
+  position: sticky;
+  top: 30px;
+  box-shadow: 0 8px 25px var(--learnova-shadow);
+}
+
+.enrollment-price {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.enrollment-price .discount-price {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.enrollment-price .original-price {
+  text-decoration: line-through;
+  color: var(--learnova-muted);
+}
+
+.discount-label {
+  font-weight: 600;
+  margin: 10px 0 25px;
+}
+
+.enrollment-info {
+  border-top: 1px solid var(--learnova-border);
+  border-bottom: 1px solid var(--learnova-border);
+  padding: 15px 0;
+}
+
+.enrollment-info div {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+.enrollment-info span {
+  color: var(--learnova-muted);
+}
+
+.enrollment-info strong {
+  font-weight: 600;
+}
+
+.enroll-btn {
+  width: 100%;
+  border: none;
+  padding: 15px;
+  margin-top: 25px;
+  border-radius: 8px;
+  background: var(--learnova-primary);
+  color: var(--learnova-surface);
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.access-info {
+  text-align: center;
+  font-size: 13px;
+  color: var(--learnova-muted);
+  line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+  .course-detail-content {
+    grid-template-columns: 1fr;
+    padding: 60px 25px;
+  }
+
+  .enrollment-card {
+    position: static;
+  }
+
+  .course-detail-header h1 {
+    font-size: 38px;
+  }
+}
+
+@media (max-width: 600px) {
+  .course-detail-header {
+    padding: 50px 20px;
+  }
+
+  .course-detail-header h1 {
+    font-size: 30px;
+  }
+
+  .course-detail-header p {
+    font-size: 14px;
+  }
+
+  .course-detail-meta {
+    gap: 12px;
+    font-size: 14px;
+  }
+
+  .course-detail-content {
+    padding: 45px 20px;
+  }
+
+  .course-detail-image {
+    height: 230px;
+  }
+
+  .course-section h2 {
+    font-size: 24px;
+  }
+
+  .enrollment-card {
+    padding: 25px 20px;
+  }
+}
+
+/* Learnova interaction polish; geometry is unchanged. */
+:where(.course-detail-page) :is(input, select, textarea):focus-visible { border-color: var(--learnova-primary); outline: 2px solid var(--learnova-focus); outline-offset: 2px; }
+:where(.course-detail-page) :is(button, a):focus-visible { outline: 2px solid var(--learnova-primary); outline-offset: 3px; }
+:where(.course-detail-page) :is(input, button, select, textarea):disabled { opacity: .65; cursor: not-allowed; }
+:where(.course-detail-page) input[type="checkbox"] { accent-color: var(--learnova-primary); }
+
+.course-detail-page .enroll-btn:disabled { opacity: .65; cursor: not-allowed; }

@@ -1,0 +1,204 @@
+/* Styles owned by Progress.jsx. Shared class names use zero-specificity page scopes. */
+
+:where(.progress-page) .progress-bar {
+  height: 8px;
+  background: var(--learnova-light);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-page {
+  width: 100%;
+}
+
+.progress-header {
+  margin-bottom: 28px;
+}
+
+.progress-header h1 {
+  margin: 0 0 8px;
+  font-size: 30px;
+  color: var(--learnova-ink);
+}
+
+.progress-header p {
+  margin: 0;
+  color: var(--learnova-muted);
+  font-size: 15px;
+}
+
+.progress-summary {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-bottom: 35px;
+}
+
+.progress-summary-card {
+  background: var(--learnova-surface);
+  border: 1px solid var(--learnova-border);
+  border-radius: 12px;
+  padding: 22px;
+}
+
+.progress-summary-card span {
+  display: block;
+  color: var(--learnova-muted);
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.progress-summary-card strong {
+  font-size: 28px;
+  color: var(--learnova-ink);
+}
+
+.course-progress-section h2 {
+  margin: 0 0 18px;
+  font-size: 22px;
+  color: var(--learnova-ink);
+}
+
+.course-progress-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.course-progress-card {
+  background: var(--learnova-surface);
+  border: 1px solid var(--learnova-border);
+  border-radius: 12px;
+  padding: 22px;
+}
+
+.course-progress-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 22px;
+}
+
+.course-progress-top h3 {
+  margin: 0 0 7px;
+  font-size: 18px;
+  color: var(--learnova-ink);
+}
+
+.course-progress-top p {
+  margin: 0;
+  color: var(--learnova-muted);
+  font-size: 14px;
+}
+
+.course-progress-top span {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.progress-active {
+  background: var(--learnova-light);
+  color: var(--learnova-muted);
+}
+
+.progress-completed {
+  background: var(--learnova-light);
+  color: var(--learnova-ink);
+}
+
+.progress-bar-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.progress-bar-info span {
+  font-size: 13px;
+  color: var(--learnova-muted);
+}
+
+.progress-bar-info strong {
+  font-size: 13px;
+  color: var(--learnova-ink);
+}
+
+:where(.progress-page) .progress-bar {
+  width: 100%;
+  height: 9px;
+  background: var(--learnova-light);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background: var(--learnova-primary);
+  border-radius: 20px;
+  transition: width 0.3s ease;
+}
+
+.progress-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16px;
+}
+
+.progress-bottom span {
+  color: var(--learnova-muted);
+  font-size: 13px;
+}
+
+.progress-view-btn {
+  border: none;
+  background: var(--learnova-primary);
+  color: var(--learnova-surface);
+  padding: 10px 16px;
+  border-radius: 7px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.progress-view-btn:hover {
+  background: var(--learnova-primary);
+}
+
+@media (max-width: 900px) {
+  .progress-summary {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .progress-header h1 {
+    font-size: 25px;
+  }
+
+  .progress-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .course-progress-top {
+    flex-direction: column;
+  }
+
+  .progress-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .progress-view-btn {
+    width: 100%;
+  }
+}
+
+/* Learnova interaction polish; geometry is unchanged. */
+:where(.progress-page) :is(input, select, textarea):focus-visible { border-color: var(--learnova-primary); outline: 2px solid var(--learnova-focus); outline-offset: 2px; }
+:where(.progress-page) :is(button, a):focus-visible { outline: 2px solid var(--learnova-primary); outline-offset: 3px; }
+:where(.progress-page) :is(input, button, select, textarea):disabled { opacity: .65; cursor: not-allowed; }
+:where(.progress-page) input[type="checkbox"] { accent-color: var(--learnova-primary); }

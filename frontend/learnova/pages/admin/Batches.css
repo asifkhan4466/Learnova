@@ -1,0 +1,96 @@
+.sab-page { color:#07164c; font-family:Arial,sans-serif; }
+.sab-page * { box-sizing:border-box; }
+.sab-page .sa-page-heading { gap:16px; margin-bottom:20px; }
+.sab-page .sa-page-heading h1 { font-size:29px; letter-spacing:-.6px; margin:0 0 5px; }
+.sab-page .sa-page-heading p { color:#5a72a3; font-size:13px; margin:0; }
+.sab-page .sa-heading-icon { width:58px; height:58px; background:#e4f0ff; color:#0067ff; border-radius:13px; }
+.sab-page .sa-page-heading>button { margin-left:auto; padding:12px 21px; white-space:nowrap; }
+.sab-page button,.sab-page select,.sab-page input { font:inherit; font-size:12px; padding:10px 12px; border:1px solid #dce9ff; border-radius:6px; color:#183871; background:white; }
+.sab-page button { cursor:pointer; }
+.sab-page button:hover { background:#edf5ff; }
+.sab-page button:disabled { opacity:.4; cursor:not-allowed; }
+.sab-page :is(button,input,select):focus-visible { outline:2px solid #0067ff; outline-offset:2px; }
+.sab-page .sa-summary { grid-template-columns:repeat(4,minmax(0,1fr)); gap:10px; margin-bottom:16px; }
+.sab-page .sa-summary article { padding:16px 12px; min-height:100px; border:1px solid #e0ebff; border-radius:9px; background:#fff; gap:12px; }
+.sab-page .sa-summary article>span { width:53px; height:56px; border-radius:13px; }
+.sab-page .sa-summary strong { font-size:25px; }
+.sab-page .sa-summary p { font-size:11px; color:#536d9e; margin:6px 0 0; }
+.sab-page svg { width:19px; height:19px; }
+.sab-page dialog { width:min(600px,calc(100vw - 32px)); max-height:85dvh; overflow:auto; padding:24px; border:1px solid #dce9ff; border-radius:12px; color:#07164c; }
+.sab-page dialog::backdrop { background:#07164c55; }
+.sab-page dialog h2 { margin-top:0; }
+.sab-page dialog dt { font-size:12px; color:#647caa; }
+.sab-page dialog dd { margin:5px 0 16px; overflow-wrap:anywhere; }
+@media(max-width:1100px){.sab-page .sa-summary{grid-template-columns:repeat(2,minmax(0,1fr));}}
+@media(max-width:600px){.sab-page .sa-page-heading{flex-wrap:wrap;}.sab-page .sa-page-heading>button{margin-left:0;}.sab-page .sa-summary{grid-template-columns:1fr;}}
+
+.sab-page .sab-primary { background:#0067ff; color:white; border-color:#0067ff; }
+.sab-page .sab-panel { border:1px solid #e0ebff; border-radius:11px; background:white; overflow:hidden; }
+.sab-page .sab-tools { display:flex; align-items:center; flex-wrap:wrap; gap:10px; padding:14px; }
+.sab-page .sab-search { display:flex; align-items:center; border:1px solid #dce9ff; border-radius:6px; padding-left:10px; color:#5672a6; flex:1 1 170px; }
+.sab-page .sab-search input { border:0; width:100%; min-width:0; }
+.sab-page .sab-tools select { flex:1; min-width:100px; max-width:165px; }
+.sab-page .sab-tools button { background:#f4f8ff; }
+.sab-page .sab-table-wrap { overflow-x:auto; }
+.sab-page table { width:100%; min-width:1050px; border-collapse:collapse; text-align:left; font-size:11px; }
+.sab-page th { background:linear-gradient(120deg,#f6fbff,#eaf4ff); padding:13px 10px; color:#122c66; font-size:11px; white-space:nowrap; }
+.sab-page td { padding:11px 10px; border-top:1px solid #edf2fb; color:#526b9e; line-height:1.5; }
+.sab-page td strong { color:#2c477d; font-weight:500; }
+.sab-page tbody tr:hover { background:#f8fbff; }
+.sab-page input[type=checkbox] { width:13px; height:13px; accent-color:#0067ff; }
+.sab-page .sab-person { display:flex; align-items:center; gap:7px; }
+.sab-page .sab-person>span { display:grid; place-items:center; width:28px; height:28px; flex-shrink:0; border-radius:50%; background:#e7f0ff; color:#3563a4; overflow:hidden; font-size:9px; }
+.sab-page .sab-person img { width:100%; height:100%; object-fit:cover; }
+.sab-page .sa-status { padding:5px 10px; border-radius:20px; font-size:10px; background:#e8f1ff; color:#0067ff; }
+.sab-page .sa-status[data-status=Active] { background:#d8fbea; color:#00a163; }
+.sab-page .sa-status[data-status=Upcoming] { background:#fff0db; color:#ef8b11; }
+.sab-page .sab-view { display:grid; place-items:center; width:30px; height:30px; padding:5px; color:#0067ff; }
+.sab-page .sab-pagination { display:flex; align-items:center; gap:12px; padding:16px; border-top:1px solid #edf2fb; color:#526b9e; font-size:12px; }
+.sab-page .sab-pagination>select { margin-left:auto; }
+.sab-page .sab-pagination nav { display:flex; gap:5px; }
+.sab-page .sab-pagination button { min-width:30px; padding:7px; }
+.sab-page [aria-current=page] { background:#0067ff; color:white; border-color:#0067ff; }
+.sab-page .sab-form { display:grid; grid-template-columns:1fr 1fr; gap:15px; }
+.sab-page .sab-form label { display:grid; gap:8px; font-size:13px; min-width:0; }
+.sab-page .sab-form :is(input,select) { width:100%; min-width:0; }
+.sab-page dialog footer { display:flex; gap:10px; justify-content:flex-end; margin-top:20px; }
+.sab-page .sab-message { padding:0 14px; font-size:12px; }
+@media(max-width:650px){.sab-page .sab-pagination{flex-wrap:wrap;}.sab-page .sab-pagination>span{width:100%;}.sab-page .sab-pagination>select{margin-left:0;}.sab-page .sab-form{grid-template-columns:1fr;}}
+/* Reference refinements, confined to the Admin Batches page. */
+.sab-page .sab-stats { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:10px; margin-bottom:16px; }
+.sab-page .sab-stats article { display:flex; align-items:center; gap:13px; padding:16px 13px; background:#fff; border:1px solid #e0ebff; border-radius:9px; min-height:106px; }
+.sab-page .sab-stat-icon { width:54px; height:58px; display:grid; place-items:center; flex-shrink:0; border-radius:13px; }
+.sab-page .sab-stat-icon svg { width:30px; height:30px; stroke-width:2.5; }
+.sab-page .sab-purple { background:#efe2ff; color:#841aff; }
+.sab-page .sab-green { background:#ddfbed; color:#00b570; }
+.sab-page .sab-orange { background:#fff0db; color:#ff8500; }
+.sab-page .sab-blue { background:#e0efff; color:#0067ff; }
+.sab-page .sab-stats strong { font-size:27px; color:#07164c; }
+.sab-page .sab-stats p { margin:4px 0 9px; font-size:12px; color:#526b9e; }
+.sab-page .sab-stats small { font-size:10px; color:#009f69; }
+.sab-page .sab-panel { min-height:540px; display:flex; flex-direction:column; }
+.sab-page .sab-tools { gap:9px; padding:14px 12px; }
+.sab-page .sab-tools .sab-search { flex:1.5 1 180px; }
+.sab-page .sab-tools select { flex:1 1 100px; max-width:155px; }
+.sab-page .sab-filter-button,.sab-page .sab-export { display:flex; align-items:center; gap:6px; font-weight:600; white-space:nowrap; }
+.sab-page table { min-width:1040px; }
+.sab-page th { padding:12px 8px; font-size:11px; }
+.sab-page td { padding:10px 8px; font-size:11px; height:53px; }
+.sab-page th:nth-child(3) { width:13%; }
+.sab-page th:nth-child(4) { width:12%; }
+.sab-page th:nth-child(5) { width:12%; }
+.sab-page td:nth-child(6),.sab-page td:nth-child(7) { white-space:nowrap; }
+.sab-page .sab-row-actions { display:flex; gap:5px; align-items:center; flex-wrap:wrap; width:102px; }
+.sab-page .sab-row-actions>.sab-view { width:29px; height:29px; padding:5px; border-radius:6px; font-size:20px; }
+.sab-page .sab-row-actions svg { width:17px; height:17px; }
+.sab-page .sab-edit { background:#edf5ff; }
+.sab-page .sab-row-menu { flex-basis:100%; display:grid; gap:3px; padding:5px; background:#f8fbff; border:1px solid #dce9ff; border-radius:7px; }
+.sab-page .sab-row-menu button { font-size:10px; padding:7px 3px; }
+.sab-page .sab-delete,.sab-page .sab-error { color:#ce2349; }
+.sab-page .sab-pagination { margin-top:auto; min-height:65px; }
+.sab-page .sab-applied { display:flex; align-items:center; gap:10px; padding:0 14px 10px; font-size:11px; color:#526b9e; }
+.sab-page .sab-applied button { border:0; color:#0067ff; padding:5px; }
+@media(max-width:1150px){.sab-page .sab-stats{grid-template-columns:repeat(2,minmax(0,1fr));}}
+@media(max-width:550px){.sab-page .sab-stats{grid-template-columns:1fr;}.sab-page .sab-tools .sab-search{flex-basis:100%;}}
+
+.sab-page .sab-student-dialog{width:min(850px,calc(100vw - 40px))}.sab-student-data{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;border-bottom:1px solid #e3edff;padding-bottom:16px}.sab-student-data dd{overflow-wrap:anywhere}.sab-student-photo{width:72px;height:72px;border-radius:50%;object-fit:cover}.sab-student-dialog fieldset{border:0;padding:0;margin:0}.sab-student-dialog footer{display:flex;gap:10px;justify-content:flex-end;margin-top:20px}@media(max-width:600px){.sab-student-data{grid-template-columns:1fr}.sab-student-dialog footer{flex-wrap:wrap}}

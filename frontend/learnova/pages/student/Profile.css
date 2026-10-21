@@ -1,0 +1,183 @@
+/* Styles owned by Profile.jsx. Shared class names use zero-specificity page scopes. */
+
+.student-profile {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.profile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.profile-header h1 {
+  margin: 0 0 7px;
+  font-size: 30px;
+}
+
+.profile-header p {
+  margin: 0;
+  color: var(--learnova-muted);
+}
+
+.edit-profile-btn {
+  border: none;
+  background: var(--learnova-primary);
+  color: var(--learnova-surface);
+  padding: 11px 18px;
+  border-radius: 7px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.profile-card {
+  background: var(--learnova-surface);
+  border-radius: 14px;
+  padding: 30px;
+  box-shadow: 0 5px 20px var(--learnova-shadow);
+}
+
+.profile-top {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.profile-avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: var(--learnova-primary);
+  color: var(--learnova-surface);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.profile-basic h2 {
+  margin: 0 0 6px;
+}
+
+.profile-basic p {
+  margin: 0 0 8px;
+  color: var(--learnova-muted);
+}
+
+.profile-basic span {
+  display: inline-block;
+  background: var(--learnova-light);
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.profile-divider {
+  height: 1px;
+  background: var(--learnova-light);
+  margin: 30px 0;
+}
+
+.profile-section h3 {
+  margin: 0 0 20px;
+  font-size: 18px;
+}
+
+.profile-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+}
+
+.profile-field label {
+  display: block;
+  color: var(--learnova-muted);
+  font-size: 13px;
+  margin-bottom: 7px;
+}
+
+.profile-field p {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.profile-bio {
+  margin: 0;
+  color: var(--learnova-muted);
+  line-height: 1.7;
+}
+
+@media (max-width: 600px) {
+  .profile-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .profile-header h1 {
+    font-size: 26px;
+  }
+
+  .edit-profile-btn {
+    width: 100%;
+  }
+
+  .profile-card {
+    padding: 22px;
+  }
+
+  .profile-top {
+    align-items: flex-start;
+  }
+
+  .profile-avatar {
+    width: 70px;
+    height: 70px;
+    font-size: 25px;
+  }
+
+  .profile-basic h2 {
+    font-size: 19px;
+  }
+
+  .profile-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+}
+
+.profile-field input,
+.profile-field textarea {
+  width: 100%;
+  padding: 11px 12px;
+  border: 1px solid var(--learnova-border);
+  border-radius: 7px;
+  outline: none;
+  font-size: 14px;
+  background: var(--learnova-surface);
+}
+
+.profile-field input:focus,
+.profile-field textarea:focus {
+  border-color: var(--learnova-primary);
+}
+
+.profile-field textarea {
+  resize: vertical;
+  line-height: 1.6;
+}
+
+.profile-section > textarea {
+  width: 100%;
+}
+
+/* Learnova interaction polish; geometry is unchanged. */
+:where(.student-profile) :is(input, select, textarea):focus-visible { border-color: var(--learnova-primary); outline: 2px solid var(--learnova-focus); outline-offset: 2px; }
+:where(.student-profile) :is(button, a):focus-visible { outline: 2px solid var(--learnova-primary); outline-offset: 3px; }
+:where(.student-profile) :is(input, button, select, textarea):disabled { opacity: .65; cursor: not-allowed; }
+:where(.student-profile) input[type="checkbox"] { accent-color: var(--learnova-primary); }
